@@ -20,11 +20,6 @@ DEBUG = True
 server_address = '127.0.0.1:5000'
 db = SQLAlchemy(app)
 
-admins = open('admins.txt', 'r').read().split('\n')
-
-sender_email = 'michaelvoov@yandex.ru'
-sender_password = '12345'
-
 class Article(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(60), nullable=False)
@@ -127,7 +122,9 @@ def register():
 
             db.session.add(new_user)
             db.session.commit()
-            return redirect('/login')
+            resp = make_response(redirect("/"))
+            resp.set_cookie('user', user.login)
+            return resp
         except:
             flash('Что то пошло не так', category='error')
     else:
