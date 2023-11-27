@@ -67,8 +67,6 @@ class User(db.Model):
     __tablename__ = 'User'
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(60), unique=True, nullable=False)
-    name = db.Column(db.String(60), unique=True, nullable=False)
-    surname = db.Column(db.String(60), unique=True, nullable=False)
     email = db.Column(db.String(150), nullable=False, unique=True)
     password = db.Column(db.Text(), nullable=False)
     pathUser = db.Column(db.Integer, nullable=False)
@@ -102,8 +100,6 @@ def register():
     user = User.query.filter_by(login=name).first()
     if request.method == "POST":
         login= request.form['login']
-        name = request.form['name']
-        surname = request.form['surname']
         email = request.form['email']
         password = request.form['password']
         image = request.files['file']
@@ -118,7 +114,7 @@ def register():
             pathUser += '/image.png'
             image.save(pathUser)
 
-            new_user = User(name=name, surname=surname, email=email, password=password, login=login, pathUser=pathUser)
+            new_user = User(email=email, password=password, login=login, pathUser=pathUser)
 
             db.session.add(new_user)
             db.session.commit()
