@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <title>High_tech</title>
+    </head>
+</html>
+<body>
+{% include 'footer.html' %}
+
+<br>
+<header class="header2"  style="margin-top: -17px;">
+  <h1 class="headh1 h1" style="font-size: 5rem;">О меня</h1>
+</header>
+<br><br><br><br>
+<div class="test">
+  <p style="text-align: center; color: #808080; margin-top: 20px; font-size:70px;">Создатель</p>
+</div>
+
+<br><br>
+<div class="cards">
+  <div class="card" style="width: 1200px; height: 1200px;">
+    <h2 class="card-title">Степан</h2>
+      <img src="/static/Profile-Card/Stepa.jpg">
+      <p class="card-desc">Я знаю python (flask and t,d)
+      </p>
+  </div>
+</div>
+
+{% include 'footer.html' %}
+</body>

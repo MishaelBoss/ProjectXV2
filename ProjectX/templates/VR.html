@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <title>VR</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+
+<header class="header2"  style="margin-top: -17px; min-height: 150px;">
+  <h1 class="headh1 h1" style="font-size: 5rem;">О VR/AR</h1>
+</header>
+
+<br><br>
+<div class="test">
+  <p style="text-align: center; color: #808080; margin-top: 20px; font-size:70px;">О VR/AR</p>
+</div>
+
+<br><br>
+<div class="News-card" style="width: 70%; height: 620px; padding: 0 0 0 0;">
+  <br><br>
+  <hr class="hr-washed">
+  <div class="BlockCard">
+    <br><br>
+    <div class="cards">
+      <div class="card" style="width: 1200px; height: 1200px;">
+        <h2 class="card-title">Пупкова Светлана Петровна</h2>
+        <img src="/static/images/Pupkova Svetlana.jpg">
+          <p class="card-desc">Образование – высшее:
+            Современная гуманитарная академия, г. Москва (2004 г.)
+            АНО ВО "Московский институт современного академического образования" (2016 г.) – квалификация «Учитель информатики».
+            Педагогический стаж - 7 лет.
+            Прошла обучение по программам повышения квалификации по направлению «VR/AR (базовый модуль)», «Основы технологии формирования гибких компетенций при обучении проектной деятельности», ФГАУ «Фонд новых форм развития образования» (2020 и 2021 г.г.), ФГБОУ ДО «Федеральный центр дополнительного образования»; «Технологии развития образовательных результатов обучающихся в условиях дополнительного образования (естественнонаучной и инженерно-технологической направленности)», ГАОУ ВО «МГПУ» (2021 г.); «Использование цифровых инструментов в реализации программ», ФГБОУ ДО ФЦДО (2022 г.); «VRAR -технологии. Продвинутый уровень», ФГБОУ ДО ФЦДО (2022 г.).
+          </p>
+      </div>
+    </div>
+
+    <div class="first_page">
+      <div class="wrapper"style="height: 400px; bottom: -50px; position: relative;">
+        <div class="content-splitter">
+          <div class="left">
+            <div class="block">
+              <div class="headerbox">О VR/AR</div>
+              <div class="content">
+                В VR/AR-квантуме обучающиеся осваивают объемную визуализацию, работают с виртуальной (VR), дополненной (AR) и смешанной (MR) реальностью. Кванторианцы разрабатывают образовательные приложения, проектируют симуляторы для будущих инженеров, проводят виртуальные туры по культурным и историческим достопримечательностям и др.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <hr class="hr-washed">
+</div>
+
+<br><br><br><br>
+{% include 'footer.html' %}
+</body>

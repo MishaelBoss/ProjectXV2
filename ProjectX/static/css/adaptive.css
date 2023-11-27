@@ -1,0 +1,25 @@
+@media screen and(max-width: 480px){
+    form{
+        height: 420px;
+        width: 250px;
+    }
+
+    form h3{
+        font-size: 25px;
+        line-height: 4px;
+        text-align: center;
+    }
+
+    input{
+        height: 50px;
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .background{
+        width: 400px;
+        height: 400px;
+        left: 50%;
+        top: 50%;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/profile Card.css')}}">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+        <title>{{ bell.title }}</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+
+<br>
+<div class="News-card">
+  <div class="News-card-header">
+      <h1 style="font-family: 'Comfortaa', cursive;">Имя: {{ user.name }}</h1>
+      <h2 style="font-family: 'Comfortaa', cursive;">Фамилия: {{ user.surname }}</h2>
+      <hr class="hr-washed">
+      <p style="font-family: 'Comfortaa', cursive;"><b>Заголовок о проблемы: {{ bell.title }}</p>
+      <p style="font-family: 'Comfortaa', cursive;"><b>Полное описание: {{ bell.text }} </b></p>
+      <hr class="hr-washed">
+      <p style="font-family: 'Comfortaa', cursive;"><b>email: {{ user.email }}</p>
+      <p style="font-family: 'Comfortaa', cursive;"><b>телефон: {{ bell.number }} </b></p>
+      <hr class="hr-washed">
+      <p style="font-family: 'Comfortaa', cursive;"><b>Дата: {{ bell.date.date() }} </b></p>
+  </div>
+  <div class="Btn_detail">
+    <a class="view, button-28" href="/feedback/{{ bell.id }}/del" style="
+    position: relative;
+    border-radius: 4rem; 
+    width: 150px; 
+    height: 20px; 
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    align-content: center;">Удалить</a>
+  </div>
+</div>
+
+
+{% include 'footer.html' %}
+</body>

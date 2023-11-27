@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/registr.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <title>Изменить профиль</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+
+<form style="position: absolute; height: 820px; margin-top: 200px;" action="" method="post" method="POST" action="/register" enctype="multipart/form-data" action="/pathUser">
+  <h1>Изменить профиль</h1>
+  <br>
+  {% for cat, msg in get_flashed_messages(True) %}
+    <di class="flash {{cat}}">{{ msg }}</di>
+  {% endfor %}
+  <div class="News-card-logo">
+    <div class="inputUserImage">
+      <label for="file">Фото профиля</label>
+      <input class="inputUserImage" type="file" name="file">
+    </div>
+  </div>
+
+  <form method="post">
+    <label style="font-family: 'Comfortaa', cursive;" for="login">Логин<img src="/static/icons/user.png" class="icon-login"></label>
+    <input type="text" placeholder="{{user.login}}" name="login" id="login" title="Логин" value="{{ user.login }}">
+    
+    <hr class="hr-washed">
+
+    <label for="name" style="font-family: 'Comfortaa', cursive;">Имя<img src="/static/icons/user.png" class="icon-login"></label>
+    <input type="text" placeholder="{{user.name}}" name="name" id="name" title="Имя" value="{{ user.name }}">
+
+    <label style="font-family: 'Comfortaa', cursive;" for="username">Фамилия<img src="/static/icons/user.png" class="icon-login"></label>
+    <input type="text" placeholder="{{user.surname}}" name="surname" id="surname" title="Фамилия" value="{{ user.surname }}">
+
+    <hr class="hr-washed">
+
+    <label style="font-family: 'Comfortaa', cursive;" for="email">email<img src="/static/icons/mail.png" class="icon-login"></label>
+    <input type="email" placeholder="Ваш Email" name="email" id="email" title="Мыло" value="{{ user.email }}">
+
+    <button type="submit" class="view, button-28" title="Войти">Сохранить изменение аккаунта</button><br><br>
+</form>
+</body>

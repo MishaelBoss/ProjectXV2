@@ -1,0 +1,470 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+canvas{ 
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
+}
+
+body{
+  background-color: lightgrey;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 0.7x solid slategrey;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(83, 83, 83);
+}
+
+.infos{
+  margin-left: 1.5;
+}
+  .cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card {
+    margin: 40px;
+    position: relative;
+    max-width: 250px;
+    max-height: 350px;
+    box-shadow: 0 12px 20px -6px black;
+  }
+  
+  .card-title {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: #6184a8;
+    padding: 2%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .card-desc {
+    display: block;
+    font-size: 1.2rem;
+    position: absolute;
+    height: 0;
+    top: 0;
+    opacity: 0;
+    padding: 18px 8%;
+    background-color: white;
+    overflow-y: scroll;
+    transition: 0.8s ease;
+    border-radius: 15px;
+  }
+  
+  .card:hover .card-desc {
+    opacity: 1;
+    height: 100%;
+  }
+
+.first_page{
+  position: relative;
+  text-align: center;
+	margin: 0 0 0 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit_trash{
+  display: flex;
+  justify-content: flex-end;
+  padding: -20px 0px 0px 0px;
+}
+
+.edit_trash img{
+	width: 35px;
+	height: 35px;
+  margin-left: 10px;
+}
+
+  .wrapper {
+    border-radius: 15px;
+    grid-template-columns: 6fr 4fr;
+    width: 900px;
+    background: hsl(0,0%,95%);
+    box-shadow: 1px 1px 25px 3px rgba(0,0,0,.3); 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .headerbox{
+    width: max-content;
+    font-size: 2rem;
+    white-space: nowrap;
+    color: black;
+  }
+  
+  .content-splitter {
+    display: flex;
+    flex-direction: column;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    padding: 0 3em;
+    width: minmax(80px, 80%);
+  }
+  .block { 
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+  }
+  .content {
+    font-size: 1.2em;
+    color: #404040;
+  }
+
+.BlockCard{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 120px 0px 0px;
+}
+
+.test {
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #333;
+  box-shadow: 8px 10px 5px #444;
+  padding: 8px 12px;
+  background-color: white;
+}
+
+/* это часть карточки о нас */
+.Abautcard{
+  display: flex;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255, .5);
+  max-width: 1500px;
+  min-height: 300px;
+  box-shadow: 0 0 30px rgba(10, 10, 10, .35);
+  margin: auto;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.Abautcard::before,
+.Abautcard::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.Abautcard::before{
+  width: 100%;
+  height: 100%;
+  border-radius: 1px solid #FFF;
+  top: -.7rem;
+  left: -.7red;
+}
+
+.img{
+  margin-right: 15px;
+  width: 8rem;
+  min-width: 80px;
+  box-shadow: 0 0 0 4px #FFF;
+  border-radius: 50%;
+}
+
+.AbautInfos{
+  margin-left: 1.5;
+}
+
+.name{
+  margin-bottom: 1rem;
+}
+
+.name h2{
+  font-size: 1.3rem;
+}
+
+.name h4{
+  font-size: .8rem;
+  color: black;
+}
+
+.text{
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+
+.stats{
+  margin-bottom: 1rem;
+}
+
+.stats li{
+  min-width: 5rem;
+}
+
+.stats li h3{
+  font-size: .99rem;
+}
+
+.stats li h3{
+  font-size: .75rem;
+}
+
+/* карточка для игры */
+.hero {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+}
+
+.hero-profile-img {
+  height: 17rem;
+	transition: all 0.5s;
+}
+
+.hero-profile-img:hover {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	transition: 1s; 
+	transform: scale(1.1);
+}
+
+.hero-description-bk {
+  background-image: linear-gradient(0deg , #3f5efb, #fc466b);
+  border-radius: 30px;
+  position: absolute;
+  top: 55%;
+  left: -5px;
+  height: 65%;
+  width: 108%;
+  transform: skew(19deg, -9deg);
+}
+
+.second .hero-description-bk {
+  background-image: linear-gradient(-20deg , #bb7413, #e7d25c)
+}
+
+.hero-logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 30%;
+  left: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero-logo img {
+  height: 100%;
+}
+
+.hero-description {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  left: 150px;
+  bottom: 26%;
+}
+
+.hero-date {
+  position: absolute;
+  color: #fff;
+  left: 30px;
+  bottom: 10%;
+}
+
+.eight a {
+  top: -12px;
+  left: 200px;
+  border-radius: 10px;
+  background: #E8CCB5;
+  color: #B05151;
+  padding: 15px 30px;
+  position: relative;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.eight a:before, .eight a:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #F58262;
+  box-shadow: inset 0 -2px 0 #B05151;
+  opacity: 0;
+  transition: .5s ease-in-out;
+}
+.eight a:before {
+  left: 13px;
+}
+.eight a:after {
+  right: 13px;
+}
+.eight a:hover:before, .eight a:hover:after {
+  opacity: 1;
+}
+
+.ImgSponser{
+  border-style: dotted;
+  background-color: aliceblue;
+  box-shadow: 5px 6px 20px 2px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-top: 20px;
+}
+
+.NameProfel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+/* новые шрифты */
+.FontsText p h1 h2 h3 h4{
+  font-family: 'Comfortaa', cursive;
+}
+
+.News-card {
+  width: 900px;
+  background: rgba(255, 255, 255, .5);
+  padding: 4rem;
+  border-radius: 10px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -70px;
+}
+
+.News-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, .15);
+  transform: rotate(-6deg);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.News-card-logo img {
+  width: 60px;
+}
+
+.News-card-logo img {
+  display: grid;
+  align-content: space-around;
+  justify-content: center;
+  background-color: rgba(0, 250, 0, 0.7);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -30px;
+}
+.News-card-logo{
+  display: flex;
+  justify-content: center;
+}
+
+.News-card-logo,
+.News-card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.Btn_detail{
+  display: flex;
+  bottom: 10px;
+}
+
+/* css для обратной связи ошибка & отправка */
+.flash {padding: 10px; display: flex; justify-content: center;}
+.flash.success {
+         border: 1px solid #21DB56;
+         background: #AEFFC5;
+}
+.flash.error {
+         border: 1px solid #FF4343;
+         background: #FF9C9C;
+}
+
+
+.hr-washed {
+	margin: 20px 0;
+	padding: 0;
+	height: 10px;
+	border: none;
+	border-top: 1px solid #333;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+  border-radius: 50%;
+}
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 2px solid #000000;
+}
+.table td {
+  background-color: #2197db;
+	border: 2px solid #000000;
+	padding: 5px;
+}

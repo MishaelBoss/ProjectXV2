@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <title>Новости</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+<script src="/static/js/redirects.js"></script>
+<br><br><br><br>
+<h1 style="text-align: center; color: blueviolet; font-family: Impact, Haettenschweiler">Новости от админа</h1>
+
+<div style="position: relative; text-align: center;">
+{% if articles|length > 0 %}
+  {% for el in articles%}
+  <div class="first hero">
+    <button onclick="redirect('/products/{{ el.id }}')"><img class="hero-profile-img" src="{{ el.path }}"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-description">
+      <h2 style="font-family: 'Comfortaa', cursive;"> {{ el.title }} </h2>
+      <p style="font-family: 'Comfortaa', cursive;"> {{ el.intro }} </p>
+    </div>
+    <div  class="hero-date">
+      <p style="font-family: 'Comfortaa', cursive;"><b>Дата: {{ el.date.date() }} </b></p>
+      <div class="eight">
+        <a href="/products/{{ el.id }}">Подробно</a>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% else %}
+<p>У нас еще нет статей на сайте.</p>
+{% endif %}
+</div>
+
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+{% include 'footer.html' %}
+</body>

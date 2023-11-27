@@ -1,0 +1,214 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <title>Главная</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+<header class="header2"  style="margin-top: -20px;">
+  <h1 class="headh1 h1" style="font-size: 5rem;">
+    Детский
+    технопарк
+    ”Кванториум-Новоуральск”
+  </h1>
+  <h1 class="headh1 h1" style="font-size: 2rem;">
+    это территория творчества, изобретательства и сотрудничества!
+  </h1>
+
+</header>
+
+<div class="News-card">
+  <div class="News-card-logo">
+    <img src="##" style="border-radius: 50%; height: 100px; width: 100px;" alt="logo">
+  </div>
+  <div class="News-card-header">
+    <h1 style="font-family: 'Comfortaa', cursive;">Добро пожаловать:<h1></h1>
+    <hr class="hr-washed">
+      <h1 style="font-family: 'Comfortaa', cursive;">Login: </h1>
+  </div>
+    <button class="view, button-28" onclick="redirect('/admin')" style="
+    border-radius: 4rem; 
+    width: 150px; 
+    height: 20px; 
+    min-height: 50px;
+    display: grid;
+    align-content: center;">Админ панель</button>
+</div>
+
+<img src="/static/icons/Logo.png" style="margin: 10px auto 20px; display: block; padding: 8rem 0 0 0;">
+
+<p style="font-size: 2rem; color: black; text-align: center;">Детский технопарк «Кванториум-Новоуральск» — это уникальный центр дополнительного образования.
+  Который помогает получать новые знания сверх школьной программы. Что бы в школьном возрасте учащиеся могли работать над своими собственными проектами.
+</p>
+
+<br><br><br><br>
+<div class="test">
+  <p style="text-align: center; margin-top: 20px; font-size:50px; border-radius: 50px;">4 основных направлений:</p>
+</div>
+<br><br><br><br>
+
+<div style="position: relative; text-align: center;">
+  <div class="first hero">
+    <button onclick="redirect('/vr')"><img class="hero-profile-img" src="/static/images/BG/BgVR.jpg"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/VRAR-квантум.png">
+    </div>
+    <div class="hero-description">
+      <p>VR</p>
+    </div>
+    <div  class="hero-date">
+      <div class="eight">
+        <a href="vr">Подробно</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="second hero">
+    <button onclick="redirect('/it')"><img class="hero-profile-img" src="/static/images/BG/BgIT.jpg"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/IT.png">
+    </div>
+    <div class="hero-description">
+      <p>IT</p>
+    </div>
+    <div class="hero-date">
+      <div class="eight">
+        <a href="it">Подробно</a>
+      </div>
+    </div>
+  </div>
+  <div class="first hero">
+    <button onclick="redirect('/High_tech')"><img class="hero-profile-img" src="/static/images/BG/BgHajtek.jpg"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/High tech.png">
+    </div>
+    <div class="hero-description">
+      <p>Хайтек</p>
+    </div>
+    <div class="hero-date">
+      <div class="eight">
+        <a href="High_tech">Подробно</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="first hero">
+    <button onclick="redirect('/promrobo')"><img class="hero-profile-img" src="/static/images/BG/Promrobo.jpg"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/Promrobo.png">
+    </div>
+    <div class="hero-description">
+      <p>Робототехника</p>
+    </div>
+    <div class="hero-date">
+      <div class="eight">
+        <a href="/promrobo">Подробно</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br>
+<div class="test">
+  <p style="text-align: center; margin-top: 20px; font-size:50px;">4 дополнительных направлений:</p>
+</div>
+<br><br><br><br>
+
+<div style="position: relative; text-align: center;">
+  <div class="first hero">
+    <button onclick="redirect('/mathematics')"><img class="hero-profile-img" src="/static/images/BG/BgMathematic.jpg"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/Mathematics.jpg">
+    </div>
+    <div class="hero-description">
+      <p>Математика</p>
+    </div>
+    <div  class="hero-date">
+      <div class="eight">
+        <a href="mathematics">Подробно</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="second hero">
+    <button onclick="redirect('/technical_english')"><img class="hero-profile-img" src="/static/images/BG/BgMathematic.jpg"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/English.jpg" alt="">
+    </div>
+    <div class="hero-description">
+      <p>Технический английский язык</p>
+    </div>
+    <div class="hero-date">
+      <div class="eight">
+        <a href="technical_english">Подробно</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="first hero">
+    <button onclick="redirect('/chess')"><img class="hero-profile-img" src="/static/images/BG/BgChess.jpg"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/Chess.jpg">
+    </div>
+    <div class="hero-description">
+      <p>Шахматы</p>
+    </div>
+    <div  class="hero-date">
+      <div class="eight">
+        <a href="chess">Подробно</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="second hero">
+    <button onclick="redirect('/ai')"><img class="hero-profile-img" src="/static/images/BG/BgMathematic.jpg"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/English.jpg" alt="">
+    </div>
+    <div class="hero-description">
+      <p>ИИ</p>
+    </div>
+    <div class="hero-date">
+      <div class="eight">
+        <a href="/ai">Подробно</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+<div class="wrapper" style="height: 170px;">
+  <div class="content-splitter">
+    <div class="left">
+      <div class="block">
+        <div class="content" style="top: 45px; position: relative;">  Занятия в детском технопарке «Кванториум-Новоуральск» бесплатны для обучающихся 10-18 лет.
+          Доступно не только жителям городов, в которых расположены технопарки, но и учащимся из сельской местности, детям из детских домов и др.
+          Отличительной особенностью является обучение детей с применением новых образовательных технологий.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="/static/js/redirects.js"></script>
+<script src="/static/js/main.js"></script>
+
+{% include 'footer.html' %}
+</body>

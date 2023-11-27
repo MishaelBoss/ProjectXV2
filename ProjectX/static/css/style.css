@@ -1,0 +1,140 @@
+@keyframes header_anim{
+	from{
+		transform: translateX(-120%);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+.headh1{
+	transform: translateX(0);
+	animation-name: header_anim;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	text-transform: uppercase;
+	color:white;
+	align-self: center;
+}
+
+.header2{
+	display: flex;
+	min-height: 100vh;
+	padding: 8px 50px;
+	background-image: url("/static/images/BG/10-professij.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:cover;
+	border-radius: 0px 0px 20px 20px;
+}
+
+.h1{
+	color: #FF9640;
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	font-size: 6em;
+}
+
+.h1::first-line{
+	color: #ea4790;
+}
+
+.h2{
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	font-size: 5em;
+	font-weight: 700;
+}
+
+.article{
+	position: relative;
+	min-height: 100vh;
+	padding: 8px 50px;
+}
+
+.article_whitebg::before,
+.article_bluebg::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+}
+
+.article_whitebg::before{
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.article_bluebg::before{
+	background: rgba(0, 34, 255, 0.5);
+}
+
+.icon-login{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.edit_trash{
+	width: 20px;
+	height: 20px;
+}
+
+.edit_trash image{
+	width: 20px;
+	height: 20px;
+}
+
+.PhotoGrid{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.Photo {
+	display: inline-block;
+	position: relative;
+	width: 400px;
+	min-width: 400px;
+	height: 400px;
+	border-radius: 30px;
+	overflow:hidden;
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+	margin: 30px;
+	border: solid 5px;
+	transition: all 0.5s;
+}
+
+.Photo:hover {
+	filter: alpha(opacity=70);
+	transition: 1s; 
+	transform: scale(1.1);
+}
+
+.Photo-description-bk {
+	background-image: linear-gradient(0deg , #3f5efb, #fc466b);
+	border-radius: 30px;
+	position: absolute;
+	top: 60%;
+	height: 50%;
+	width: 100%;
+}
+  
+.Photo-img {
+	height: 70%;
+}
+
+.Photo-description {
+	position: absolute;
+	color: #fff;
+	font-weight: 900;
+	left: 150px;
+	bottom: 26%;
+}
+
+.Photo-description p{
+	margin-left: -120px;
+	color: black;
+	font-size: 1.3rem;
+}

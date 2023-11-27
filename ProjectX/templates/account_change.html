@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <title>Изменение аккаунта</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+<br><br><br><br>
+<h1 style="text-align: center; color: darkmagenta; font-family: Impact, Haettenschweiler">Изменить аккаунт</h1>
+
+<div class="News-card" style="bottom: -150px;">
+    <div class="News-card-logo">
+      <img src="{{ url_for('static', filename='Profile-Card/Stepa.jpg') }}" style="border-radius: 50%;" alt="logo">
+    </div>
+    <div class="News-card-header">
+        <form method="post">
+            <input type="text" name="title" id="title" value="Имя" style="font-family: 'Comfortaa', cursive; height: 30px; width: 250px;"><br>
+            <textarea name="intro" id="intro" cols="30" rows="10" style="font-family: 'Comfortaa', cursive;">email</textarea><br>
+            <textarea name="text" id="text" cols="30" rows="10" style="font-family: 'Comfortaa', cursive;">##</textarea><br>
+        </form>
+    </div>
+    <div class="Btn_detail">
+      <a class="view, button-28" href="" style="
+      border-radius: 4rem; 
+      width: 150px; 
+      height: 20px; 
+      min-height: 50px;
+      margin: auto;
+      display: grid;
+      align-content: center;">Изменить аккаунт</a>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+</body>

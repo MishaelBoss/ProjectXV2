@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/profile Card.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+        <title>{{ article.title }}</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+<script src="/static/js/redirects.js"></script>
+<br>
+<div class="News-card">
+  <div class="News-card-logo">
+  </div>
+  <div class="News-card-header">
+      <img src="{{ article.path }}" style="border-radius: 50%; height: 100px; width: 100px;">
+      <h1 style="font-family: 'Comfortaa', cursive;">{{ article.title }}</h1>
+      <p style="font-family: 'Comfortaa', cursive;"><b>Полное описание: {{ article.text }} </b></p>
+      <p style="font-family: 'Comfortaa', cursive;"><b>Дата: {{ article.date.date() }} </b></p>
+  </div>
+  <div class="Btn_detail" style="justify-content: center;">
+    <button class="view, button-28" onclick="redirect('/products/{{ article.id }}/update')" style="
+    border-radius: 4rem; 
+    width: 150px; 
+    height: 20px; 
+    min-height: 50px;
+    display: grid;
+    align-content: center;">Изменить</button>
+
+    <button class="view, button-28" onclick="redirect('/products/{{ article.id }}/del')" style="
+    position: relative;
+    left: 20px;
+    border-radius: 4rem; 
+    width: 150px; 
+    height: 20px; 
+    min-height: 50px;
+    display: grid;
+    align-content: center;">Удалить</button>
+
+    <button class="view, button-28" onclick="redirect('/UploadPhoto')" style="
+    position: relative;
+    left: 40px;
+    border-radius: 4rem; 
+    width: 150px; 
+    height: 20px; 
+    min-height: 50px;
+    display: grid;
+    align-content: center;">Добавить изображение</button>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+<hr class="hr-washed">
+
+{% if objects %}
+{% for i in objects %}
+  {% if i.preview_path %}
+  <div class="Photo">
+    <img src="/static/BGPhoto/BGtest.jpg" class="Photo-img">
+    <div class="Photo-description-bk"></div>
+    <div class="Photo-description">
+      <p>Дата публикации:</p>
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+{% else %}
+<h1 style="text-align: center;">Автор не добавил изображение</h1>
+{% endif %}
+
+<hr class="hr-washed">
+
+<br><br>
+<div class="first_page" style="bottom: -130px;">
+  <div class="wrapper">
+    <p style="font-size: 2rem;">Комментарии</p>
+    <div class="content-splitter">
+      <div class="left">
+        <div class="block">
+          <div class="Btn_detail">
+            <a class="view, button-28" href="/create_comment" style="
+            border-radius: 4rem; 
+            width: 150px; 
+            height: 20px; 
+            min-height: 50px;
+            display: grid;
+            align-content: center;">Оставить</a>
+          </div>
+
+          {% if comment|length > 0 %}
+            {% for el in comment%}
+            <div class="wrapper" style="width: 750px;">
+              <div class="content-splitter">
+                <div style="display: grid; justify-content: start; justify-items: center;">
+                  <img class="hero-profile-img" src="{{ el.path}}" style="border-radius: 50%; height: 100px; width: 100px;">
+                  <h3 style="font-family: 'Comfortaa', cursive;"> {{ el.name }} </h3>
+                  <h3 style="font-family: 'Comfortaa', cursive;"> {{ el.surname }} </h3>
+                </div>
+                <div class="left">
+                  <div class="block">
+                    <div class="content">  
+                      <h2 style="font-family: 'Comfortaa', cursive;"> {{ el.title }} </h2>
+                      <p style="font-family: 'Comfortaa', cursive;"> {{ el.text }} </p>
+                      <p style="font-family: 'Comfortaa', cursive;"><b>Дата: {{ el.date_post.date() }} </b></p>
+                    </div>
+                  </div>
+                </div>
+                <hr class="hr-washed">
+                <div class="edit_trash">
+                  {% if not user %}
+                  {% else %}
+                    <button onclick="redirect('/')"><img src="/static/icons/edit.png"></button>
+                    <button onclick="redirect('/comment_delete/{{ comment.id }}/del')"><img src="/static/icons/trash.png"></button>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            </div>
+          {% endfor %}
+          {% else %}
+          <p>Оставить комментарии</p>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+</body>

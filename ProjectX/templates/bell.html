@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <title>Сообщение</title>
+    </head>
+</html>
+<body>
+<div class="header">
+  <a class="logo">Кванториум-Новоуральск<img src="/static/icons/Logo.png" style="height: 20px; width: 20px;"></a>
+  <div class="header-right">
+    <a href="/">Главная</a>
+    <a href="/products">Новости</a>
+    <a href="game">Игра о Кванториуме</a>
+    <a href="/direction_and_programs">Направления и программы</a>
+    <a href="/event">Мероприятия</a>
+    <a href="/courses">Курсы</a>
+    <a href="/login">Войти на сайт</a>
+    <div class="ProfilePanel">
+    {% if not user %}
+      <a href="profile"><img src="/static/icons/user-default.png" alt="Изображение по умолчанию"><h1>Профиль</h1></a>
+    {% else %}
+      <a href="profile"><img src="{{user.pathUser}}" alt="logo"><h1>{{user.name}}</h1></a>
+    {% endif %}
+    </div>
+    <div class="ProfilePanel">
+      <a class="active" href="/bell"><img src="/static/icons/bell.png">Сообщение</a>
+    </div>
+  </div>
+</div>
+<br><br><br><br>
+<h1 style="text-align: center; color: blueviolet; font-family: Impact, Haettenschweiler">Сообщение</h1>
+
+  <div class="Abautcard">
+    <div class="AbautInfos" style="margin-left: auto; margin-right: auto;">
+        <ul>
+            <li>
+              {% if bell|length > 0 %}
+                  {% for bell in bell%}
+                      <h2 style="font-family: 'Comfortaa', cursive;"> {{ bell.title }} </h2>
+                      <p style="font-family: 'Comfortaa', cursive;">Имя: {{ user.name }} </p>
+                      <p style="font-family: 'Comfortaa', cursive;">Фамилия: {{ user.surname }} </p>
+                      <p style="font-family: 'Comfortaa', cursive;"><b>Дата: {{ bell.date.date() }} </b></p>
+                      <a class="view, button-28" href="/bell_feedback_detail/{{ bell.id }}" style="
+                      border-radius: 4rem; 
+                      width: 150px; 
+                      height: 20px; 
+                      min-height: 50px;
+                      display: grid;
+                      align-content: center;">Подробно</a>
+                  {% endfor %}
+
+                {% else %}
+                <p>Еще нет Сообщений</p>
+                {% endif %}
+
+            </li>
+        </ul>
+    </div>
+ </div>
+
+ {% include 'footer.html' %}
+</body>

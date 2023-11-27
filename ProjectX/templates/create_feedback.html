@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <title>Обратная связь</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+<br><br><br><br>
+<h1 style="text-align: center; color: darkmagenta; font-family: Impact, Haettenschweiler">Обратная связь</h1>
+
+<div class="card" style="max-width: 1300px; max-height: 1300px; margin-left: auto; margin-right: auto; border-radius: 4rem;">
+    <div class="infos" style="text-align: center;">
+        <form method="post">
+            <input type="tel" name="number" id="number" placeholder="+7-902-555-55-55" minlength="9" maxlength="20" style="font-family: 'Comfortaa', cursive; height: 30px; width: 250px;"><br><br>
+            <textarea name="title" id="title" cols="30" rows="10" minlength="10" maxlength="1100" style="font-family: 'Comfortaa', cursive;" placeholder="Заголовок о вашей проблемы"></textarea><br>
+            <textarea name="text" id="text" cols="30" rows="10" minlength="10" maxlength="1100" style="font-family: 'Comfortaa', cursive;" placeholder="Полное описание о вашей проблемы"></textarea><br>
+            <input class="view, button-28" type="submit" value="отправить" style="border-radius: 4rem; width: 500px;">
+        </form>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+</body>

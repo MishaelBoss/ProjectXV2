@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/registr.css')}}">
+      <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+      <link href="../static/signup.css" rel="stylesheet">
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <title>Войти</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+<script src="/static/js/password.js"></script>
+
+<br>
+{% for cat, msg in get_flashed_messages(True) %}
+  <di class="flash {{cat}}">{{ msg }}</di>
+{% endfor %}
+
+<form style="height: 520px;" method="post">
+    <h3>Login</h3>
+
+    <label for="username">Введите логин</label>
+    <input type="text" name="login" placeholder="Логин" id="login">
+
+    <label for="password">Пароль</label>
+    <input autocomplete="on" type="password" name="password" placeholder="Password" id="password">
+    <input style="width: 2rem;" type="checkbox" onclick="checking()"><p>Show Password</p>
+
+    <button>Войти</button>
+    <div class="reg">
+      <a href="/register">Зарегистрироваться</a>
+    </div>
+</form>
+
+</body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+        <title>About</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+
+<br>
+<header class="header2"  style="margin-top: -17px;">
+  <h1 class="headh1 h1" style="font-size: 5rem;">
+    О нас
+  </h1>
+</header>
+
+<br><br><br><br>
+<div class="test">
+  <p style="text-align: center; margin-top: 20px; font-size:50px;">Фотокарточки</p>
+</div>
+
+  <div style="position: relative; text-align: center;">
+    <div class="first hero">
+      <img class="hero-profile-img" src="{{ url_for('static', filename='Profile-Card/BG/Michael.jpg') }}">
+      <div class="hero-description-bk"></div>
+      <div class="hero-logo">
+        <img src="{{ url_for('static', filename='Profile-Card/I-am-programist.jpg') }}">
+      </div>
+      <div class="hero-description">
+        <h1>Михаил Яковлев</h1>
+        <p>Fullstack</p>
+      </div>
+        <div class="eight" style="position: absolute; left: -28px; bottom: 10%;">
+          <a href="https://vk.com/id597169928">Вк</a>
+        </div>
+    </div>
+    
+<div class="second hero">
+  <img class="hero-profile-img" src="{{ url_for('static', filename='Profile-Card/BG/Stepa.jpg') }}">
+  <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="{{ url_for('static', filename='Profile-Card/Stepa.jpg') }}">
+    </div>
+    <div class="hero-description">
+      <h1>Степан Седунов</h1>
+      <p>Fullstack</p>
+    </div>
+    <div class="eight" style="position: absolute; left: -28px; bottom: 10%;">
+      <a href="@">Вк</a>
+    </div>
+  </div>
+</div>
+
+{% include 'footer.html' %}
+</body>

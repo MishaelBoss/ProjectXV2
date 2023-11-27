@@ -1,0 +1,190 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <title>НАПРАВЛЕНИЯ И ПРОГРАММЫ</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+
+<br>
+<header class="header2"  style="margin-top: -20px;">
+  <h1 class="headh1 h1" style="font-size: 5rem;">
+    Направления и программы
+  </h1>
+</header>
+
+<br><br><br><br>
+<div class="test">
+  <p style="text-align: center; margin-top: 20px; font-size:50px; border-radius: 50px;">4 основных направлений:</p>
+</div>
+
+<div style="position: relative; text-align: center;">
+  <div class="first hero">
+    <img class="hero-profile-img" src="/static/images/BG/BgVR.jpg">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/VRAR-квантум.png">
+    </div>
+    <div class="hero-description">
+      <p>VR</p>
+    </div>
+    <div  class="hero-date" style="display: grid; margin-left: -100px;">
+        <div class="eight">
+            <a href="@">Записатся</a>
+            <a href="vr">Подробно</a>
+        </div>
+    </div>
+  </div>
+  
+  <div class="second hero">
+    <img class="hero-profile-img" src="/static/images/BG/BgIT.jpg">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/IT.png">
+    </div>
+    <div class="hero-description">
+      <p>IT</p>
+    </div>
+    <div class="hero-date" style="display: grid; margin-left: -100px;">
+      <div class="eight">
+        <a href="@">Записатся</a>
+        <a href="it">Подробно</a>
+      </div>
+    </div>
+  </div>
+  <div class="first hero">
+    <img class="hero-profile-img" src="/static/images/BG/BgHajtek.jpg">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/High tech.png">
+    </div>
+    <div class="hero-description">
+      <p>Хайтек</p>
+    </div>
+    <div class="hero-date" style="display: grid; margin-left: -100px;">
+      <div class="eight">
+        <a href="@">Записатся</a>
+        <a href="High_tech">Подробно</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="first hero">
+    <img class="hero-profile-img" src="/static/images/BG/Promrobo.jpg">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/Promrobo.png">
+    </div>
+    <div class="hero-description">
+      <p>Робототехника</p>
+    </div>
+    <div class="hero-date" style="display: grid; margin-left: -100px;">
+      <div class="eight">
+        <a href="@">Записатся</a>
+        <a href="/promrobo">Подробно</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br>
+<div class="test">
+  <p style="text-align: center; margin-top: 20px; font-size:50px;">4 дополнительных направлений:</p>
+</div>
+
+<div style="position: relative; text-align: center;">
+  <div class="first hero">
+    <img class="hero-profile-img" src="/static/images/BG/BgMathematic.jpg">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/Mathematics.jpg">
+    </div>
+    <div class="hero-description">
+      <p>Математика</p>
+    </div>
+    <div  class="hero-date" style="display: grid; margin-left: -100px;">
+      <div class="eight">
+        <a href="@">Записатся</a>
+        <a href="mathematics">Подробно</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="second hero">
+    <img class="hero-profile-img" src="/static/images/BG/BgChess.jpg">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/Chess.jpg">
+    </div>
+    <div class="hero-description">
+      <p>Шахматы</p>
+    </div>
+    <div  class="hero-date" style="display: grid; margin-left: -100px;">
+      <div class="eight">
+        <a href="@">Записатся</a>
+        <a href="chess">Подробно</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="first hero">
+    <img class="hero-profile-img" src="/static/images/BG/BgMathematic.jpg">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/English.jpg" alt="">
+    </div>
+    <div class="hero-description">
+      <p>Технический английский язык</p>
+    </div>
+    <div class="hero-date" style="display: grid; margin-left: -100px;">
+      <div class="eight">
+        <a href="@">Записатся</a>
+        <a href="technical_english">Подробно</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="second hero">
+    <img class="hero-profile-img" src="/static/images/BG/BgMathematic.jpg">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="/static/icons/English.jpg" alt="">
+    </div>
+    <div class="hero-description">
+      <p>ИИ</p>
+    </div>
+    <div class="hero-date" style="display: grid; margin-left: -100px;">
+      <div class="eight">
+        <a href="@">Записатся</a>
+        <a href="/ai">Подробно</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+  <div class="wrapper" style="height: 170px;">
+    <div class="content-splitter">
+      <div class="left">
+        <div class="block">
+          <div class="content" style="top: 45px; position: relative;">  Занятия в детском технопарке «Кванториум-Новоуральск» бесплатны для обучающихся 10-18 лет.
+            Доступно не только жителям городов, в которых расположены технопарки, но и учащимся из сельской местности, детям из детских домов и др.
+            Отличительной особенностью является обучение детей с применением новых образовательных технологий.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include 'footer.html' %}
+</body>

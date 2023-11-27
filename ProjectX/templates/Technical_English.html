@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <title>Technical-English</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+<header class="header2"  style="margin-top: -17px; min-height: 150px;">
+  <h1 class="headh1 h1" style="font-size: 5rem;">О английского технического языка</h1>
+</header>
+
+<br><br>
+<div class="test">
+  <p style="text-align: center; color: #808080; margin-top: 20px; font-size:70px;">О английского технического языка</p>
+</div>
+
+<br><br>
+<div class="News-card" style="width: 70%; height: 620px; padding: 0 0 0 0;">
+  <br><br>
+  <hr class="hr-washed">
+  <div class="BlockCard">
+    <br><br>
+    <div class="cards">
+      <div class="card" style="width: 1200px; height: 1200px;">
+        <h2 class="card-title">Миронова Татьяна Рудольфовна</h2>
+        <img src="/static/images/Skosyrskaya Olga Gennadievna.jpg">
+          <p class="card-desc">Образование – высшее:
+            Пермский государственный университет, специальность «Филолог, преподаватель английского языка и литературы»;
+            Уральский государственный педагогический институт, специальность «Практический психолог в системе образования»   
+            Владение методикой преподавания английского языка (в т.ч. технического), подготовки обучающихся к конкурсным мероприятиям и олимпиадам по английскому языку регионального уровня.
+            Общий стаж работы по специальности 34 года, из них педагогический стаж 18 лет.
+          </p>
+      </div>
+    </div>
+
+    <div class="first_page">
+      <div class="wrapper"style="height: 400px; bottom: -50px; position: relative;">
+        <div class="content-splitter">
+          <div class="left">
+            <div class="block">
+              <div class="headerbox">О английского технического языка</div>
+              <div class="content">
+                Программа дополняет и расширяет знания обучающихся по английскому языку, прививает интерес к предмету и позволяет использовать эти знания на практике: при работе с технической документацией на английском языке; для поиска необходимой информации  и для решения задач, лежащих в поле проектной деятельности обучающихся детского технопарка «Кванториум»; для выполнения качественного исследования, включающего использования иноязычных источников сети Интернет, технических книг и журналов; для общения с подростками из других стран, объединенных одинаковыми интересами и целями; для наиболее точного раннего профессионального самоопределения и для выдерживания высокой конкуренции на рынке труда. Реализация данной программы способствует развитию умения самостоятельно работать, думать, решать творческие и технические задачи на английском языке, а также совершенствовать навыки аргументации собственной позиции по определенному вопросу, используя приобретённые компетенции.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <hr class="hr-washed">
+</div>
+
+<br><br><br><br>
+{% include 'footer.html' %}
+</body>

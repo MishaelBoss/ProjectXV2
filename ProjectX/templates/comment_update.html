@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/profile Card.css')}}">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      <title>Обновление поста</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+
+<br>
+<h1 style="text-align: center;">Обновить пост</h1>
+<br><br>
+
+<div class="card" style="max-width: 1300px; max-height: 1300px; margin-left: auto; margin-right: auto; border-radius: 4rem;">
+  <div class="infos" style="text-align: center;">
+    <form method="post" enctype="multipart/form-data">
+      <input type="text" name="title" id="title" value="Имя поста" style="font-family: 'Comfortaa', cursive; height: 30px; width: 250px;"><br>
+      <textarea name="intro" id="intro" cols="30" rows="10" style="font-family: 'Comfortaa', cursive;">{{ article.intro }}</textarea><br>
+      <textarea name="text" id="text" cols="30" rows="10" style="font-family: 'Comfortaa', cursive;">{{ article.text }}</textarea><br>
+      <input type="file" name="file">
+      <input class="view, button-28" type="submit" value="Обновить" style="border-radius: 4rem; width: 500px;">
+    </form>
+  </div>
+</div>
+
+{% include 'footer.html' %}
+</body>
