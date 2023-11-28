@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Rubik&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -11,14 +14,7 @@ canvas{
 }
 
 body{
-  background-color: lightgrey;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background-color: #000000;
 }
 
 body.dark-mode {
@@ -42,6 +38,11 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: rgb(83, 83, 83);
+}
+
+p::selection {
+  color: transparent;
+  text-shadow: 0 0 3px #fff;
 }
 
 .infos{
@@ -169,11 +170,18 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 20px;
   position: relative;
   text-align: center;
-  width: 100%;
-  border: 1px solid #333;
-  box-shadow: 8px 10px 5px #444;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
   padding: 8px 12px;
-  background-color: white;
+  background: -webkit-linear-gradient(90deg, #085163,#54207e,#e05b52);
+  background: linear-gradient(90deg, #085163,#54207e,#e05b52);
+}
+
+.test p{
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  text-align: center; margin-top: 20px; font-size:50px; border-radius: 50px;
 }
 
 /* это часть карточки о нас */
@@ -467,4 +475,46 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #2197db;
 	border: 2px solid #000000;
 	padding: 5px;
+}
+
+/* Выпадающий список */
+.dropbtn {
+  background-color: #1f3ec7;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  border-radius: 5%;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(255, 83, 56);
 }

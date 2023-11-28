@@ -13,8 +13,11 @@
 <body>
 {% include 'header.html' %}
 <script src="/static/js/redirects.js"></script>
-<br><br><br><br>
-<h1 style="text-align: center; color: blueviolet; font-family: Impact, Haettenschweiler">Новости от админа</h1>
+
+<br><br><br>
+<div class="test">
+  <p>Новости</p>
+</div>
 
 <div style="position: relative; text-align: center;">
 {% if articles|length > 0 %}
@@ -29,6 +32,7 @@
     <div  class="hero-date">
       <p style="font-family: 'Comfortaa', cursive;"><b>Дата: {{ el.date.date() }} </b></p>
       <div class="eight">
+        <a href="$$"><img style="width: 10%;" src="/static/icons/share.png"></a>
         <a href="/products/{{ el.id }}">Подробно</a>
       </div>
     </div>

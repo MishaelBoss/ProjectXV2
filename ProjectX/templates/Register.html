@@ -18,16 +18,31 @@
 <di class="flash {{cat}}">{{ msg }}</di>
 {% endfor %}
 <form style="position: absolute; height: 720px; margin-top: 150px;" action="" method="post" method="POST" action="/register" enctype="multipart/form-data">
-  <h3>Регистрация</h3>
-
-  <label for="username">Логин</label>
-  <input type="text" name="login" placeholder="Логин" id="login">
+  <h3 style="color: #fff;">Регистрация</h3>
 
   <label for="email">Email</label>
   <input type="email" name="email" placeholder="email" id="email">
 
+  <label for="name">имя</label>
+  <input type="name" name="name" placeholder="name" id="name">
+
+  <label for="surname">фамилия</label>
+  <input type="surname" name="surname" placeholder="surname" id="surname">
+
+  <label for="surname">отчество</label>
+  <input type="surname" name="surname" placeholder="surname" id="surname">
+
   <label for="password">Пароль</label>
   <input autocomplete="on" type="password" name="password" placeholder="Password" id="password">
+
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+      <a href="#">Ссылка 1</a>
+      <a href="#">Ссылка 2</a>
+      <a href="#">Ссылка 3</a>
+    </div>
+  </div>
 
   <div style="display: flex; align-items: center;">
     <input style="width: 2rem;" type="checkbox" onclick="checking()"><p>Show Password</p>
