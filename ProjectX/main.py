@@ -198,12 +198,6 @@ def Buy():
 
 @app.route('/admin')
 def admin():
-    name = request.cookies.get('user')
-    global admins
-    name = request.cookies.get('user')
-    admins = open('admins.txt', 'r').read().split('\n')
-    if not name in admins:
-        return redirect('/login')
     return render_template("admin-Index.html")
     
 
