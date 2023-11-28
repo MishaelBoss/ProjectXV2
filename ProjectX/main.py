@@ -170,6 +170,13 @@ def account_change():
     return render_template("account_change.html", user=user)
 
 
+@app.route('/Exhibitions_of_works')
+def Exhibitions_of_works():
+    name = request.cookies.get('user')
+    user = User.query.filter_by(login=name).first()
+    return render_template("Exhibitions of works.html", user=user)
+
+
 @app.route('/courses')
 def Courses():
     name = request.cookies.get('user')
