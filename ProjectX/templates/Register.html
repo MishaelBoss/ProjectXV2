@@ -28,15 +28,19 @@
   <input autocomplete="on" type="email" name="email" placeholder="email" id="email">
 
   <div class="block-asterisk">
-    <label for="email">Имя</label><img src="/static/icons/asterisk.png">
+    <label for="name">Имя</label><img src="/static/icons/asterisk.png">
   </div>
   <input autocomplete="on" type="name" name="name" placeholder="имя" id="name">
 
-  <label for="surname">Фамилия</label>
+  <div class="block-asterisk">
+    <label for="surname">Фамилия</label><img src="/static/icons/asterisk.png">
+  </div>
   <input autocomplete="on" type="surname" name="surname" placeholder="фамилия" id="surname">
 
-  <label for="surname xyi">Отчество</label>
-  <input autocomplete="on" type="surname xyi" name="surname xyi" placeholder="отчество" id="surname xyi">
+  <div class="block-asterisk">
+    <label for="patronymic surname">Отчество</label><img src="/static/icons/asterisk.png">
+  </div>
+  <input autocomplete="on" type="patronymic surname" name="patronymic surname" placeholder="отчество" id="patronymic surname">
 
   <label for="phone">Номер телефона</label>
   <input autocomplete="on" type="phone" name="phone" placeholder="ваш номер телефона" id="phone">
@@ -44,7 +48,9 @@
   <label for="date">Дата рождения: </label>
   <input type="date" id="date" name="date"/>
 
-  <label for="password">Пароль</label>
+  <div class="block-asterisk">
+    <label for="password">Пароль</label><img src="/static/icons/asterisk.png">
+  </div>
   <input type="password" name="password" placeholder="Password" id="password">
 
   <div style="display: flex; align-items: center;">
