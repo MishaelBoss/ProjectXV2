@@ -1,7 +1,7 @@
-/*body{
+body{
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 91%);
-}*/
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(64,224,208,1) 91%);
+}
 
 .header {
     background-color: rgba(0, 0, 0, 0.0);
