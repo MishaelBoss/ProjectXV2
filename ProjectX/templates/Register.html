@@ -25,22 +25,22 @@
   <div class="block-asterisk">
     <label for="email">Email</label><img src="/static/icons/asterisk.png">
   </div>
-  <input autocomplete="on" type="email" name="email" placeholder="email" id="email">
+  <input autocomplete="on" type="email" name="email" placeholder="email" id="email" minlength="8">
 
   <div class="block-asterisk">
     <label for="name">Имя</label><img src="/static/icons/asterisk.png">
   </div>
-  <input autocomplete="on" type="name" name="name" placeholder="имя" id="name">
+  <input autocomplete="on" type="name" name="name" placeholder="имя" id="name" minlength="2">
 
   <div class="block-asterisk">
     <label for="surname">Фамилия</label><img src="/static/icons/asterisk.png">
   </div>
-  <input autocomplete="on" type="surname" name="surname" placeholder="фамилия" id="surname">
+  <input autocomplete="on" type="surname" name="surname" placeholder="фамилия" id="surname" minlength="2">
 
   <div class="block-asterisk">
     <label for="patronymic surname">Отчество</label><img src="/static/icons/asterisk.png">
   </div>
-  <input autocomplete="on" type="patronymic surname" name="patronymic surname" placeholder="отчество" id="patronymic surname">
+  <input autocomplete="on" type="patronymic surname" name="patronymic surname" placeholder="отчество" id="patronymic surname" minlength="2">
 
   <label for="phone">Номер телефона</label>
   <input autocomplete="on" type="phone" name="phone" placeholder="ваш номер телефона" id="phone">
@@ -51,7 +51,8 @@
   <div class="block-asterisk">
     <label for="password">Пароль</label><img src="/static/icons/asterisk.png">
   </div>
-  <input type="password" name="password" placeholder="Password" id="password">
+  <li>Минимально длина парля 8</li>
+  <input type="password" name="password" placeholder="Password" id="password" minlength="8">
 
   <div style="display: flex; align-items: center;">
     <input style="width: 1rem; margin: auto;" type="checkbox" onclick="checking()"><p style="margin-right: 180px;">Show Password</p>
