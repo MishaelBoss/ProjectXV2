@@ -17,18 +17,17 @@
 
 <div class="News-card">
   <div class="News-card-logo">
-    <img src="{{user.pathUser}}" style="border-radius: 50%; height: 100px; width: 100px; border: solid rgb(0, 255, 0);" alt="logo">
+    <img src="#{{user.pathUser}}#" style="border-radius: 50%; height: 100px; width: 100px; border: solid rgb(0, 255, 0);" alt="logo">
   </div>
   <div class="News-card-header">
-    <h1 style="font-family: 'Comfortaa', cursive;">Login: {{user.login}}</h1>
+    <h1 style="font-family: 'Comfortaa', cursive;">Login: #{{user.login}}#</h1>
     <hr class="hr-washed">
-      <h1 style="font-family: 'Comfortaa', cursive;">Имя: {{user.name}}</h1>
-      <h2 style="font-family: 'Comfortaa', cursive;">Фамилия: {{user.surname}}</h2>
+      <h1 style="font-family: 'Comfortaa', cursive;">#Имя: {{user.name}}#</h1>
+      <h2 style="font-family: 'Comfortaa', cursive;">#Фамилия: {{user.surname}}#</h2>
       <hr class="hr-washed">
-      <p style="font-family: 'Comfortaa', cursive;"><b>email: {{user.email}}</p>
+      <p style="font-family: 'Comfortaa', cursive;"><b>#email: {{user.email}}#</p>
       <hr class="hr-washed">
-      <p style="font-family: 'Comfortaa', cursive;"><b>Дата создание аккаунта:  {{ user.date }}</b></p>
-      <p style="font-family: 'Comfortaa', cursive;"><b>Последнее посещение:  {{ user.last_seen }}</b></p>
+      <p style="font-family: 'Comfortaa', cursive;"><b>Дата рождение:  #{{ user.date }}#</b></p>
   </div>
   <div class="Btn_detail">
     <a class="view, button-28" href="/profile_edit" style="

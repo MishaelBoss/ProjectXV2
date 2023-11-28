@@ -134,45 +134,12 @@ def login():
 
 @app.route('/profile')
 def profile():
-    name = request.cookies.get('user')
-    if name is None:
-        return redirect('/login')
-    user = User.query.filter_by(login=name).first()
-    return render_template('profile.html', user=user)
+    return render_template('profile.html')
 
-@app.route('/profile_edit', methods=['GET', 'POST'])
+
+@app.route('/profile_edit')
 def profile_edit():
-    name = request.cookies.get('user')
-    if name is None:
-        return redirect('/login')
-    user = User.query.filter_by(login=name).first()
-    if request.method == 'POST':
-        login = request.form['login']
-        email = request.form['email']
-        name = request.form['name']
-        surname = request.form['surname']
-        image = request.files['file']
-
-        pathUser = f'static/imgesUser/{login}'
-        os.makedirs(pathUser)
-        pathUser += '/image.png'
-        image.save(pathUser)
-
-        user.login = login
-        user.email = email
-        user.name = name
-        user.surname = surname
-        db.session.commit()
-        return redirect('/profile')
-    else:
-        return render_template('profile_edit.html', user=user)
-    
-
-@app.route('/logout')
-def logout():
-    resp = make_response(redirect("/login"))
-    resp.set_cookie('user', '', expires=0)
-    return resp
+    return render_template('profile_edit.html')
 
 
 @app.route('/Buy')

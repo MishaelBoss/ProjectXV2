@@ -121,44 +121,6 @@ p::selection {
   margin-left: 10px;
 }
 
-  .wrapper {
-    border-radius: 15px;
-    grid-template-columns: 6fr 4fr;
-    width: 900px;
-    background: hsl(0,0%,95%);
-    box-shadow: 1px 1px 25px 3px rgba(0,0,0,.3); 
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .headerbox{
-    width: max-content;
-    font-size: 2rem;
-    white-space: nowrap;
-    color: black;
-  }
-  
-  .content-splitter {
-    display: flex;
-    flex-direction: column;
-  }
-  .left {
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
-    padding: 0 3em;
-    width: minmax(80px, 80%);
-  }
-  .block { 
-    display: flex;
-    flex-direction: column;
-    gap: .75em;
-  }
-  .content {
-    font-size: 1.2em;
-    color: #404040;
-  }
-
 .BlockCard{
   display: flex;
   flex-direction: row;
