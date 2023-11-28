@@ -17,17 +17,28 @@
 
 <div class="News-card">
   <div class="News-card-logo">
-    <img src="#{{user.pathUser}}#" style="border-radius: 50%; height: 100px; width: 100px; border: solid rgb(0, 255, 0);" alt="logo">
+    <img src="№№" style="border-radius: 50%; height: 100px; width: 100px; border: solid rgb(0, 255, 0);" alt="logo">
   </div>
   <div class="News-card-header">
-    <h1 style="font-family: 'Comfortaa', cursive;">Login: #{{user.login}}#</h1>
     <hr class="hr-washed">
-      <h1 style="font-family: 'Comfortaa', cursive;">#Имя: {{user.name}}#</h1>
-      <h2 style="font-family: 'Comfortaa', cursive;">#Фамилия: {{user.surname}}#</h2>
+      <h1 style="font-family: 'Comfortaa', cursive;">Имя: </h1>
+      <h2 style="font-family: 'Comfortaa', cursive;">Фамилия: </h2>
+      <h2 style="font-family: 'Comfortaa', cursive;">Отчество: </h2>
       <hr class="hr-washed">
-      <p style="font-family: 'Comfortaa', cursive;"><b>#email: {{user.email}}#</p>
+      <a class="view, button-28" href="/profile_edit" style="
+      position: relative;
+      border-radius: 4rem; 
+      width: 200px; 
+      height: 20px; 
+      min-height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      align-content: center;">Добавить номер телефона</a>
+      <p style="font-family: 'Comfortaa', cursive;"><b>телефон: </p>
+      <p style="font-family: 'Comfortaa', cursive;"><b>email: </p>
       <hr class="hr-washed">
-      <p style="font-family: 'Comfortaa', cursive;"><b>Дата рождение:  #{{ user.date }}#</b></p>
+      <p style="font-family: 'Comfortaa', cursive;"><b>Дата рождение: </b></p>
   </div>
   <div class="Btn_detail">
     <a class="view, button-28" href="/profile_edit" style="

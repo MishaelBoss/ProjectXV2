@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Rubik&family=Russo+One&family=Zen+Maru+Gothic:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap');
+
 @keyframes header_anim{
 	from{
 		transform: translateX(-120%);
@@ -8,6 +11,7 @@
 }
 
 .headh1{
+	overflow: hidden;
 	display: block;
 	transform: translateX(0);
 	animation-name: header_anim;
@@ -19,11 +23,11 @@
 }
 
 .header2{
+	overflow: hidden;
 	display: flex;
-	min-height: 100vh;
+	min-height: 120vh;
 	padding: 8px 50px;
 	background-color: #0000;
-	border-radius: 0px 0px 20px 20px;
 }
 
 /*.header2 img{
@@ -32,27 +36,21 @@
 	margin-top: 200px; 
 	margin-left: -40rem;
 }*/
-
 .atom img{
-	overflow: hidden;
-	display: table-cell;
+    position: fixed;
+    display: table-cell;
     vertical-align: middle;
-    width: 40rem;
-	height: 40rem;
-	margin-left: -11rem;
+    width: 150rem;
+    height: 150rem;
+    margin-left: 5rem;
+    margin-top: -50rem;
     -webkit-text-size-adjust: 100%;
-	z-index: 0;
+    z-index: 0;
 }
 
-.h1{
-	color: #FF9640;
-	position: relative;
-	font-family: "Montserrat", sans-serif;
-	font-size: 6em;
-}
-
-.h1::first-line{
-	color: #ea4790;
+.header2 p{
+	color: white;
+	font-size: 2em;
 }
 
 .h2{

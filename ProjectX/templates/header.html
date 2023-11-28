@@ -1,5 +1,5 @@
 <div class="header">
-  <a class="logo" href="/"><p style="box-shadow: inset 0 -2px 0 #B05151;">DP-НЕЙМАРК</p></a>
+  <a class="logo" href="/"><p style="box-shadow: inset 0 -2px 0 #B05151; font-family: 'Roboto', sans-serif;">DP-НЕЙМАРК</p></a>
   <div class="header-right">
     <a href="/">Главная</a>
     <a href="/products">Статьи и новости</a>
@@ -7,12 +7,12 @@
     <a href="%%">Выставки работ</a>
     <a href="">Платный контент</a>
     <a href="/courses">Курсы</a>
-    <a href="/login">Войти на сайт</a>
+    <a href="/login">Войти</a>
     <div class="ProfilePanel">
       {% if not user %}
-        <a href="profile"><img src="/static/icons/user-default.png" alt="Изображение по умолчанию"><h1>Профиль</h1></a>
+        <a href="profile"><img src="/static/icons/user-default.png" alt="Изображение по умолчанию"></a>
       {% else %}
-        <a href="profile"><img src="{{user.pathUser}}" alt="logo"><h1>{{user.name}}</h1></a>
+        <a href="profile"><img src="{{user.pathUser}}" alt="logo"><h1>%</h1></a>
       {% endif %}
     </div>
   </div>

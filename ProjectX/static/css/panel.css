@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Rubik&family=Zen+Maru+Gothic:wght@400;500&display=swap');
+
 .header {
   position: sticky;
   overflow: hidden;
@@ -6,7 +8,7 @@
   top: 0;
   padding: 5px;
   z-index: 1000;
-  box-shadow: 0 5px 0px #085163;
+  box-shadow: 0 0 5px rgb(145, 144, 144);
 }
 
 .header a {
@@ -18,6 +20,10 @@
   font-size: 18px;
   line-height: 25px;
   border-radius: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-family: 'Zen Maru Gothic', serif;
+  margin-right: 30px;
 }
 
 .header a.logo {
@@ -64,8 +70,6 @@
   border-radius: 50%;
   height: 35px;
   width: 35px;
-  border: solid;
-  color: green;
 }
 
 .ProfilePanel h1{
