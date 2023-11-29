@@ -91,16 +91,6 @@
     height: 20px;
 }
 
-.edit_trash{
-	width: 20px;
-	height: 20px;
-}
-
-.edit_trash image{
-	width: 20px;
-	height: 20px;
-}
-
 .PhotoGrid{
 	display: flex;
 	justify-content: space-around;
@@ -152,4 +142,53 @@
 	margin-left: -120px;
 	color: black;
 	font-size: 1.3rem;
+}
+
+.cart{
+	background-color: #3f5efb;
+	width: 450px;
+	height: 250px;
+	margin-left: 15px;
+	margin-top: 15px;
+	border-radius: 15px;
+	transition: all 0.5s;
+
+	display: table;
+}
+
+.cart:hover{
+	background-color: #fc466b;
+	filter: alpha(opacity=70);
+	transition: 1s;
+}
+
+.nameUser{
+	margin-top: 15px;
+}
+
+.cart a{
+	cursor: pointer;
+	display: table-cell;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.cart p{
+	color: white;
+	font-family: 'Rubik', sans-serif;
+	font-size: 2rem;
+}
+
+.title p{
+	font-size: 1.6rem;
+}
+
+.miniText{
+    position: absolute;
+    bottom: 0;
+	display: contents;
+}
+
+.miniText p{
+	font-size: 1.5rem;
 }

@@ -116,9 +116,17 @@ p::selection {
 }
 
 .edit_trash img{
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
   margin-left: 10px;
+  transition: all 0.5s;
+}
+
+.edit_trash img:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=70);
+  transition: 1s; 
+  transform: scale(1.0);
 }
 
 .BlockCard{
