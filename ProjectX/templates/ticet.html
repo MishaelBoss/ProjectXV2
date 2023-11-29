@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      {% include 'url.html' %}
+      <title>Билеты</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+<div class="atom">
+  <img src="/static/icons/Abstract.png">
+</div>
+
+<header class="header2">
+  <div style="display: table; z-index: 1;">
+    <img style="width: -1rem; height: 5rem; margin-top: 20rem; z-index: 1;" src="/static/icons/logo.png">
+    <br><br><br><br>
+    <div style="height: 30rem; width: 30rem; display: flex;">
+        <img style="width: 30px; height: 30px; margin-top: 2px;" src="/static/icons/arrow.png">
+        <p style="font-family: 'Russo One', sans-serif;">Купить билеты</p>
+    </div>
+  </div>
+</header>
+
+  <div class="test">
+  <p>Билеты</p>
+</div>
+<br><br><br><br><br><br>
+
+<div style="position: relative; text-align: center;">
+  <div class="first hero">
+    <button onclick="redirect('/vr')"><img class="hero-profile-img" src="/static/images/BG/BgVR.jpg"></button>
+    <div class="hero-description-bk"></div>
+    <div class="hero-description">
+      <p>VR</p>
+    </div>
+    <div  class="hero-date">
+      <div class="eight">
+        <a href="vr">Подробно</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="test">
+  <p style="font-size: 20px;">DP-НЕЙМАРК - это уникальное выражение человеческой креативности, эмоций и воображения. Оно находит свое воплощение в различных формах: живописи, скульптуре, музыке, литературе и театре. Искусство позволяет нам увидеть мир по-новому, ощутить глубину человеческих чувств и эмоций, а также вызвать в нас восхищение и вдохновение. Оно является путем самовыражения и коммуникации, а также способом раскрыть свою индивидуальность и уникальность. Искусство способно трансформировать наше сознание, вдохновить изменения в обществе и стать источником развития искусствоведения. Оно является неотъемлемой частью культуры и наследия человечества, и каждое произведение, будь то картина, песня или пьеса, может иметь глубокий смысл и влияние на нашу жизнь.</p>
+</div>
+<br><br>
+</div>
+{% include 'footer.html' %}
+</body>

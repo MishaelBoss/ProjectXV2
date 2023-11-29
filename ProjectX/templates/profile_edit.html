@@ -2,13 +2,14 @@
 <html>
     <head>
       {% include 'url.html' %}
+      <link rel="stylesheet" href="static/css/registr.css">
       <title>Изменить профиль</title>
     </head>
 </html>
 <body>
 {% include 'header.html' %}
 
-<form style="position: absolute; height: 820px; margin-top: 200px;" action="" method="post" method="POST" action="/register" enctype="multipart/form-data" action="/pathUser">
+<form style="position: absolute; height: 920px; margin-top: 200px;" action="" method="post" method="POST" action="/register" enctype="multipart/form-data" action="/pathUser">
   <h1>Изменить профиль</h1>
   <br>
   {% for cat, msg in get_flashed_messages(True) %}
@@ -22,22 +23,25 @@
   </div>
 
   <form method="post">
-    <label style="font-family: 'Comfortaa', cursive;" for="login">Логин<img src="/static/icons/user.png" class="icon-login"></label>
-    <input type="text" placeholder="{{user.login}}" name="login" id="login" title="Логин" value="{{ user.login }}">
-    
-    <hr class="hr-washed">
 
     <label for="name" style="font-family: 'Comfortaa', cursive;">Имя<img src="/static/icons/user.png" class="icon-login"></label>
-    <input type="text" placeholder="{{user.name}}" name="name" id="name" title="Имя" value="{{ user.name }}">
+    <input type="text" placeholder="##" name="name" id="name" title="Имя" value="##">
 
     <label style="font-family: 'Comfortaa', cursive;" for="username">Фамилия<img src="/static/icons/user.png" class="icon-login"></label>
-    <input type="text" placeholder="{{user.surname}}" name="surname" id="surname" title="Фамилия" value="{{ user.surname }}">
+    <input type="text" placeholder="##" name="surname" id="surname" title="Фамилия" value="##">
+
+    <label style="font-family: 'Comfortaa', cursive;" for="username">Отчество<img src="/static/icons/user.png" class="icon-login"></label>
+    <input type="text" placeholder="##" name="surname" id="surname" title="Фамилия" value="##">
 
     <hr class="hr-washed">
 
     <label style="font-family: 'Comfortaa', cursive;" for="email">email<img src="/static/icons/mail.png" class="icon-login"></label>
-    <input type="email" placeholder="Ваш Email" name="email" id="email" title="Мыло" value="{{ user.email }}">
+    <input type="email" placeholder="Ваш Email" name="email" id="email" title="Мыло" value="##">
 
+    <label style="font-family: 'Comfortaa', cursive;" for="phone">Телефон<img src="/static/icons/phone.png" class="icon-login"></label>
+    <input type="phone" placeholder="Ваш телефон" name="phone" id="phone" title="телефон" value="##">
+
+    <br><br>
     <button type="submit" class="view, button-28" title="Войти">Сохранить изменение аккаунта</button><br><br>
 </form>
 </body>

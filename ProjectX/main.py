@@ -163,13 +163,6 @@ def Direction_and_programs():
     return render_template("direction_and_programs.html", user=user)
 
 
-@app.route('/account_change')
-def account_change():
-    name = request.cookies.get('user')
-    user = User.query.filter_by(login=name).first()
-    return render_template("account_change.html", user=user)
-
-
 @app.route('/Exhibitions_of_works')
 def Exhibitions_of_works():
     name = request.cookies.get('user')
@@ -184,6 +177,11 @@ def Courses():
     if name is None:
         return redirect('/login')
     return render_template("Courses.html", user=user)
+
+@app.route('/ticet')
+def ticet():
+    return render_template("ticet.html")
+
 
 
 @app.route('/About')
