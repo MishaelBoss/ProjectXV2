@@ -21,32 +21,76 @@
     </div>
   </div>
 </header>
+<div>
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть">&times;</span>
+      <form class="modal-content animate" action="../action_page.php" method="post">
+        <div class="container">
+          <h1 style="text-align: center; color: black;">Пакупка билета</h1>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <div style="position: relative; text-align: center; display: flex; justify-content: center; flex-wrap: wrap;">
+            <div class="cart">
+              <a>
+                <div class="nameUser"><p>Имя: человека</p></div>
+                <hr class="hr-washed">
+                <div class="nameUser"><p>Дата: </p></div>
+                <div class="nameUser"><p>Статус: свобдно</p></div>
+              </a>
+            </div>
 
-  <div class="test">
+            <div class="cart">
+              <a>
+                <div class="nameUser"><p>Имя: человека</p></div>
+                <hr class="hr-washed">
+                <div class="nameUser"><p>Дата: </p></div>
+                <div class="nameUser"><p>Статус: свобдно</p></div>
+              </a>
+            </div>
+
+            <div class="cart">
+              <a>
+                <div class="nameUser"><p>Имя: человека</p></div>
+                <hr class="hr-washed">
+                <div class="nameUser"><p>Дата: </p></div>
+                <div class="nameUser"><p>Статус: свобдно</p></div>
+              </a>
+            </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+    
+<div class="test">
   <p>Билеты</p>
 </div>
 <br><br><br><br><br><br>
 
 <div style="position: relative; text-align: center;">
   <div class="first hero">
-    <button onclick="redirect('/vr')"><img class="hero-profile-img" src="/static/images/BG/BgVR.jpg"></button>
+    <button onclick="document.getElementById('id01').style.display='block'"><img class="hero-profile-img" src="/static/images/BG/BgVR.jpg"></button>
     <div class="hero-description-bk"></div>
-    <div class="hero-description">
-      <p>VR</p>
+    <div class="hero-description" style="display: flex; margin-bottom: 50px;">
+      <p>Место проведение</p>
+      <p>Осталось мест:</p>
+      <p>Занято мест:</p>
+      <p>Осталось времени:</p>
     </div>
     <div  class="hero-date">
-      <div class="eight">
-        <a href="vr">Подробно</a>
+      <div class="eight" style="display: flexs;">
+        <button class="view, button-28" style="
+        position: relative;
+        border-radius: 4rem; 
+        min-height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        align-content: center;" onclick="document.getElementById('id01').style.display='block'">Посмотреть места</button>
       </div>
     </div>
   </div>
-  
 </div>
 
-<div class="test">
-  <p style="font-size: 20px;">DP-НЕЙМАРК - это уникальное выражение человеческой креативности, эмоций и воображения. Оно находит свое воплощение в различных формах: живописи, скульптуре, музыке, литературе и театре. Искусство позволяет нам увидеть мир по-новому, ощутить глубину человеческих чувств и эмоций, а также вызвать в нас восхищение и вдохновение. Оно является путем самовыражения и коммуникации, а также способом раскрыть свою индивидуальность и уникальность. Искусство способно трансформировать наше сознание, вдохновить изменения в обществе и стать источником развития искусствоведения. Оно является неотъемлемой частью культуры и наследия человечества, и каждое произведение, будь то картина, песня или пьеса, может иметь глубокий смысл и влияние на нашу жизнь.</p>
-</div>
-<br><br>
-</div>
 {% include 'footer.html' %}
 </body>

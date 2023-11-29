@@ -91,10 +91,10 @@
     height: 20px;
 }
 
-/*.cart{
-	background-color: #3f5efb;
-	width: 450px;
-	height: 250px;
+.cart{
+	background-color: #2ab023;
+	width: 150px;
+	height: 120px;
 	margin-left: 15px;
 	margin-top: 15px;
 	border-radius: 15px;
@@ -104,12 +104,13 @@
 }
 
 .cart:hover{
-	background-color: #fc466b;
+	background-color: #f09a0f;
 	filter: alpha(opacity=70);
 	transition: 1s;
 }
 
-.nameUser{
+.nameUser p{
+	text-align: center;
 	margin-top: 15px;
 }
 
@@ -123,30 +124,17 @@
 .cart p{
 	color: white;
 	font-family: 'Rubik', sans-serif;
-	font-size: 2rem;
+	font-size: 1rem;
 }
 
-.title p{
-	font-size: 1.6rem;
-}
-
-.miniText{
-    position: absolute;
-    bottom: 0;
-	display: contents;
-}
-
-.miniText p{
-	font-size: 1.5rem;
-}
-
-  <div class="cart">
-    <a>
-      <div class="nameUser"><p>Имя: человека</p></div>
-      <hr class="hr-washed">
-      <div class="title"><p>Имя: поста</p></div>
-      <div class="title"><p>Дата: поста</p></div>
-      <hr class="hr-washed">
-      <div class="miniText"><p>Краткое описание</p></div>
-    </a>
-  </div>*/
+/*          <div class="cart">
+            <a>
+              <div class="nameUser"><p>Имя: человека</p></div>
+              <hr class="hr-washed">
+              <div class="title"><p>Имя: поста</p></div>
+              <div class="title"><p>Дата: поста</p></div>
+              <hr class="hr-washed">
+              <div class="miniText"><p>Краткое описание</p></div>
+            </a>
+          </div>
+        </div>*/

@@ -1,4 +1,4 @@
-const response = await server.posts()
+/*const response = await server.posts()
 
 function checkPosition() {
     // Нам потребуется знать высоту документа и высоту экрана:
@@ -42,6 +42,15 @@ function throttle(callee, timeout) {
       timer = null
     }, timeout)
   }
+}*/
+
+
+var modal = document.getElementById('id02');
+var modal = document.getElementById('id03');
+var modal = document.getElementById('id04');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
-
-
