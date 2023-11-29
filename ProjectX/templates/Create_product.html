@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      {% include 'url.html' %}
+      <title>Создать новость</title>
+    </head>
+</html>
+<body>
+{% include 'header.html' %}
+
+<style>
+.inputUserImage input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #084cdf;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+.inputUserImage input[type=file]::file-selector-button:hover {
+    cursor: url('/static/cursor/link.cur'), auto;
+    background: #0d45a5;
+}
+</style>
+<br>
+<h1 style="text-align: center; color: darkmagenta; font-family: Impact, Haettenschweiler">Выложить пост</h1>
+
+<div class="card" style="max-width: 1300px; max-height: 1300px; margin-left: auto; margin-right: auto; border-radius: 45px; background: rgba(255, 255, 255, 0.2);" >
+  <br>
+  <div class="infos" style="text-align: center;">
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="title" id="title" value="Имя поста" style="font-family: 'Comfortaa', cursive; height: 30px; width: 250px;"><br><br>
+        <textarea name="intro" id="intro" cols="30" rows="10" style="font-family: 'Comfortaa', cursive;" placeholder="Краткое описание поста"></textarea><br><br>
+        <textarea name="text" id="text" cols="30" rows="10" style="font-family: 'Comfortaa', cursive;" placeholder="Полное описание поста"></textarea><br><br>
+        <div class="inputUserImage">
+          <input style="background-color: transparent;" class="inputUserImage" type="file" name="file">
+        </div><br>
+      <input class="view, button-28" type="submit" value="отправить" style="border-radius: 4rem; width: 500px;">
+    </form>
+    <br>
+  </div>
+</div>
+
+{% include 'footer.html' %}
+</body>

@@ -193,6 +193,11 @@ def buy():
     return render_template("buy.html")
 
 
+@app.route('/create_post')
+def Create_product():
+    return render_template("Create_product.html")
+
+
 @app.route('/About')
 def about():
     name = request.cookies.get('user')
