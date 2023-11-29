@@ -183,6 +183,10 @@ def ticet():
     return render_template("ticet.html")
 
 
+@app.route('/Student_materials')
+def Student_materials():
+    return render_template("Student_materials.html")
+
 
 @app.route('/About')
 def about():
