@@ -302,78 +302,7 @@ def Feedback_delete(id):
         return "При удаление ароизошла ошибка"
     
 
-@app.route('/products')
-def products():
-    name = request.cookies.get('user')
-    user = User.query.filter_by(login=name).first()
 
-    articles = Article.query.order_by(Article.date.desc()).all()
-    return render_template("products.html", articles=articles, user=user)
-
-
-@app.route('/products/<int:id>')
-def products_detail(id):
-    name = request.cookies.get('user')
-    user = User.query.filter_by(login=name).first()
-
-    article = Article.query.get(id)
-    comment = Comment.query.order_by(Comment.date_post.desc()).all()
-    return render_template("products_detail.html", user=user, article=article, comment=comment)
-
-
-@app.route('/products/<int:id>/del')
-def products_delete(id):
-    article = Article.query.get_or_404(id)
-
-    try:
-        db.session.delete(article)
-        db.session.commit()
-        return redirect('/products')
-    except:
-        return "При удаление ароизошла ошибка"
-    
-    
-@app.route('/products/<int:id>/update', methods=['POST', 'GET'])
-def products_update(id):
-    article = Article.query.get(id)
-    if request.method == "POST":
-        article.title = request.form['title']
-        article.intro = request.form['intro']
-        article.text = request.form['text']
-
-        try:
-            db.session.commit()
-            return redirect('/products')
-        except:
-            return "Опа"
-    else:
-            return render_template("products_update.html", article=article)
-
-
-@app.route('/Create-product', methods=['POST', 'GET'])
-def Create_product():
-    if request.method == "POST":
-        title = request.form['title']
-        intro = request.form['intro']
-        text = request.form['text']
-        image = request.files['file']
-        try:
-            path = f'static/imges_news/{title}'
-            os.makedirs(path)
-            path += '/image.png'
-            image.save(path)
-
-            article = Article(title=title, intro=intro, text=text, path=path)
-            
-            db.session.add(article)
-            db.session.commit()
-            return redirect('/products')
-        except Exception as ex:
-            print(ex)
-            return redirect('/products')
-    else:
-            return render_template("Create-product.html")
-    
     
 @app.errorhandler(404)
 def page_not_found(e):
