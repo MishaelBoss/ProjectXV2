@@ -1,91 +1,314 @@
-.row {
+@keyframes explode {
+ 0% { opacity: 1; }
+ 100% { transform: scale(1.2); opacity: 0; }
+}
+@keyframes float {
 
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
-  width: 82%;
-  margin-left: auto;
-  margin-right: auto;
+  0% {
+    -webkit-transform: rotateX(0deg) translateY(0px);
+    -moz-transform: rotateX(0deg) translateY(0px);
+    -ms-transform: rotateX(0deg) translateY(0px);
+    -o-transform: rotateX(0deg) translateY(0px);
+    transform: rotateX(0deg) translateY(0px);
+    }
+
+  50% {
+    -webkit-transform: rotateX(0deg) translateY(1px) translateX(5px);
+    -moz-transform: rotateX(0deg) translateY(10px) translateX(5px);
+    -ms-transform: rotateX(0deg) translateY(30px) translateX(5px);
+    -o-transform: rotateX(0deg) translateY(40px) translateX(5px);
+    transform: rotateX(0deg) translateY(10px) translateX(5px);
+}
+  100% {
+    -webkit-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -moz-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -ms-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -o-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    transform: rotateX(0deg) translateY(0px) translateX(1px);
+  }
+
 }
 
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
+.mdl{
+  height: auto;
+  width: 420px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-60%,-60%);
+
 }
 
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: rgba(255, 10, 255, 0.3);
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
+.cardBuy {
+  height: 390px;
+  width: 420px;
   border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(35px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  padding: 30px 30px 30px 30px;
+  overflow: hidden;
+  
 }
 
-input[type=text] {
+input[id="card-number"]{
+  font-size: 30px;
+  font-family: 'Space Mono', monospace;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  height: 50px;
 }
+
+input[id="card-number"]::placeholder{
+  color: #b5b5b5;
+  font-size: 30px;
+  font-family: 'Space Mono', monospace;
+}
+
+input::placeholder{
+  color: #b5b5b5;
+  font-family: 'Space Mono', monospace;
+}
+
+.group{
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.card-number 			  { 
+  position:relative; 
+   display: inline-block;
+  overflow: hidden;
+  margin-bottom:30px; 
+  
+ 
+}
+
+.card-number > input[id="card-number"]{
+  border: none;
+  margin-bottom: 0px;
+  outline: none;
+}
+
+.card-name > input[id="card-name"]{
+  border: none;
+  margin-bottom: 0px;
+  outline: none;
+}
+
+.card-exp > input[id="card-exp"]{
+  border: none;
+  margin-bottom: 0px;
+  outline: none;
+}
+
+.card-ccv > input[id="card-ccv"]{
+  border: none;
+  margin-bottom: 0px;
+  outline: none;
+}
+
+.underline{
+  transition: all 0.3s;
+  display: inline-block;
+  bottom: 0;
+  left: -100%;
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.card-number > input[id="card-number"]:hover + .underline
+{
+  left: 0; 
+}
+
+.card-number > input[id="card-number"]:focus + .underline
+{
+  left: 0; 
+}
+
+.card-name > input[id="card-name"]:hover + .underline{
+  left: 0; 
+}
+.card-name > input[id="card-name"]:focus + .underline{
+  left: 0; 
+}
+
+.expiration-date > input[id="card-exp"]:hover + .underline{
+  left: 0;
+}
+
+.expiration-date > input[id="card-exp"]:focus + .underline{
+  left: 0;
+}
+
+.ccv > input[id="card-ccv"]:hover + .underline{
+  left: 0;
+}
+
+.ccv > input[id="card-ccv"]:focus + .underline{
+  left: 0;
+}
+
+.card-name{ 
+  font-family: 'Space Mono', monospace;
+  padding: 0px 80px  0px 0px;
+  margin-right: 40px;
+  width: 140px;
+  position:relative; 
+  display: inline-block;
+  overflow: hidden;
+}
+
+.expiration-date{
+  font-family: 'Space Mono', monospace;
+  padding: 0px 0px 0px 0px; 
+  margin-right: 60px;
+  width: 80px;
+  position:relative; 
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ccv{
+  font-family: 'Space Mono', monospace;
+  padding: 0px 0px 0px 0px; 
+  margin-right: 0px;
+  width: 60px;
+  position:relative; 
+  display: inline-block;
+  overflow: hidden;
+}
+
+
+input {
+  font-family: 'Space Mono', monospace;
+  border: none;
+  font-size: 16px;
+  height: 26px;
+  color: #ffffff;
+  background: 0;
+  padding: 0;
+}
+
+input:focus{ 
+  border-bottom: 2px solid white;
+  outline: none;
+  font-family: 'Space Mono', monospace;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 30px;
+  margin-bottom: -2px;
+}
+
+input:hover{
+  border-bottom: 2px solid white;
+  font-family: 'Space Mono', monospace;
+  color: white;
+  margin-bottom: -2px;
+  font-size: 16px;
+  height: 30px;
+}
+
+input[id="card-number"]:focus
+{
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 30px;
+  height: 50px;
+  margin-bottom: -2px;
+  width: 400px;
+}
+
+input[id="card-number"]:hover
+{
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 30px;
+  height: 50px;
+  margin-bottom: -2px;
+  width: 400px;
+}
+
+input[id="card-name"]{
+  color: white;
+  margin-bottom: -2px;
+  font-size: 16px;
+  height: 26px;
+  width: 160px;
+}
+
+input[id="card-name"]:hover{
+  border-bottom: 2px solid white;
+  color: white;
+  margin-bottom: -2px;
+  font-size: 16px;
+  height: 26px;
+  width: 160px;
+}
+
+input[id="card-name"]:focus{
+  border-bottom: 2px solid white;
+  color: white;
+  margin-bottom: -2px;
+  font-size: 16px;
+  height: 26px;
+  width: 160px;
+}
+
+input[id="card-exp"]:hover{
+  border-bottom: 2px solid white;
+  color: white;
+  margin-bottom: -2px;
+  font-size: 16px;
+  height: 26px;
+  width: 80px;
+}
+
+input[id="card-exp"]:focus{
+  border-bottom: 2px solid white;
+  color: white;
+  margin-bottom: -2px;
+  font-size: 16px;
+  height: 26px;
+  width: 80px;
+}
+
+input[id="card-ccv"]:hover{
+  border-bottom: 2px solid white;
+  color: white;
+  margin-bottom: -2px;
+  font-size: 16px;
+  height: 26px;
+  width: 50px;
+  
+}
+
+input[id="card-ccv"]:focus{
+  border-bottom: 2px solid white;
+  color: white;
+  margin-bottom: -2px;
+  font-size: 16px;
+  height: 26px;
+  width: 50px;
+  
+}
+
 
 label {
-  margin-bottom: 10px;
+  color: white; 
+  font-size:12px;
+  font-weight:normal;
+  font-family: 'Space Mono', monospace;
+  pointer-events:none;
   display: block;
-}
+  padding-bottom: 2px;
 
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-.btn {
-  background-color: red;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.btn:hover {
-  background-color: yellowgreen;
-}
-
-a {
-  color: #2196F3;
-}
-
-hr {
-  border: 1px solid lightgrey;
-}
-
-span.price {
-  float: right;
-  color: grey;
-}
-
-.TextBG{
-  color: white;
 }
