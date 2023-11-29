@@ -70,7 +70,7 @@
   cursor: url('/static/cursor/link.cur'), auto;
   position: relative;
   display: flex;
-  bottom: 2px;
+  bottom: 10px;
   left: 10px;
   align-items: center;
 }
