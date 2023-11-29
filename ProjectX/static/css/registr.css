@@ -54,6 +54,7 @@ label{
 }
 
 input{
+    cursor: url('/static/cursor/text.cur'), auto;
     display: block;
     height: 50px;
     width: 100%;
@@ -78,7 +79,7 @@ button{
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('/static/cursor/link.cur'), auto;
 }
 .inputUserImage input[type=file]::file-selector-button {
     margin-right: 20px;
@@ -92,7 +93,12 @@ button{
   }
   
 .inputUserImage input[type=file]::file-selector-button:hover {
+    cursor: url('/static/cursor/link.cur'), auto;
     background: #0d45a5;
+}
+
+a{
+    cursor: url('/static/cursor/link.cur'), auto;
 }
 
 @media (max-width: 1200px){

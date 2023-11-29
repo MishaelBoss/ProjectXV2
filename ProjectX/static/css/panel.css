@@ -32,6 +32,7 @@
 }
 
 .header a:hover {
+  cursor: url('/static/cursor/link.cur'), auto;
   background-color: #777575;
   color: black;
 }
@@ -58,6 +59,7 @@
 }
 
 .ProfilePanel a{
+  cursor: url('/static/cursor/link.cur'), auto;
   position: relative;
   display: flex;
   bottom: 2px;

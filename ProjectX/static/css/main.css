@@ -14,6 +14,7 @@ canvas{
 }
 
 body{
+  cursor: url('/static/cursor/pointer.cur'), auto;
   background-color: #000000;
 }
 
@@ -248,6 +249,7 @@ p::selection {
 }
 
 .hero-profile-img:hover {
+  cursor: url('/static/cursor/link.cur'), auto;
 	opacity: 0.7;
 	filter: alpha(opacity=70);
 	transition: 1s; 
@@ -256,13 +258,18 @@ p::selection {
 
 .hero-description-bk {
   background-image: linear-gradient(0deg , #3f5efb, #fc466b);
-  border-radius: 30px;
+  /*border-radius: 30px;*/
   position: absolute;
   top: 55%;
   left: -5px;
   height: 65%;
   width: 108%;
-  transform: skew(19deg, -9deg);
+  /*transform: skew(19deg, -9deg);*/
+}
+
+.hero-description p{
+  margin-top: 15px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .second .hero-description-bk {
@@ -289,8 +296,10 @@ p::selection {
   position: absolute;
   color: #fff;
   font-weight: 900;
-  left: 150px;
-  bottom: 26%;
+  /*left: 150px;
+  bottom: 26%;*/
+  left: 15px;
+  bottom: 20%;
 }
 
 .hero-date {
@@ -301,6 +310,7 @@ p::selection {
 }
 
 .eight a {
+  cursor: url('/static/cursor/link.cur'), auto;
   top: -12px;
   left: 200px;
   border-radius: 10px;
@@ -333,27 +343,10 @@ p::selection {
   opacity: 1;
 }
 
-.ImgSponser{
-  border-style: dotted;
-  background-color: aliceblue;
-  box-shadow: 5px 6px 20px 2px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 150px;
-  height: 150px;
-  display: block;
-  margin-top: 20px;
-}
-
 .NameProfel {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-}
-
-/* новые шрифты */
-.FontsText p h1 h2 h3 h4{
-  font-family: 'Comfortaa', cursive;
 }
 
 .News-card {
@@ -459,38 +452,6 @@ p::selection {
   font-size: 16px;
   border: none;
   cursor: pointer;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  border-radius: 5%;
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: rgb(255, 83, 56);
 }
 
 /* load content */
