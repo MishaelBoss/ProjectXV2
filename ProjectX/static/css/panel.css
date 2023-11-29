@@ -11,6 +11,10 @@
   box-shadow: 0 0 5px rgb(145, 144, 144);
 }
 
+.header a{
+  cursor: url('/static/cursor/link.cur'), auto;
+}
+
 .header img{
   width: 30%;
 }
