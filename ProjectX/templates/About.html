@@ -1,24 +1,12 @@
 <!DOCTYPE html> 
 <html>
     <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-        <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+        {% include 'url.html' %}
         <title>About</title>
     </head>
 </html>
 <body>
 {% include 'header.html' %}
-
-<br>
-<header class="header2"  style="margin-top: -17px;">
-  <h1 class="headh1 h1" style="font-size: 5rem;">
-    О нас
-  </h1>
-</header>
 
 <br><br><br><br>
 <div class="test">

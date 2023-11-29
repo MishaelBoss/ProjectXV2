@@ -1,13 +1,8 @@
 <!DOCTYPE html> 
 <html>
     <head>
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/registr.css')}}">
-      <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-      <link href="../static/signup.css" rel="stylesheet">
-      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      {% include 'url.html' %}
+      <link rel="stylesheet" href="static/css/registr.css">
       <title>Войти</title>
     </head>
 </html>

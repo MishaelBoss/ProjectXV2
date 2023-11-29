@@ -1,11 +1,8 @@
 <!DOCTYPE html> 
 <html>
     <head>
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/registr.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/adaptive.css')}}">
-      <link rel="shortcut icon" sizes="32x32" href="{{ url_for('static', filename='icons/Logo.png')}}">
+      {% include 'url.html' %}
+      <link rel="stylesheet" href="static/css/registr.css">
       <title>Регистрация</title>
     </head>
 </html>

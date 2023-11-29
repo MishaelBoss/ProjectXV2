@@ -1,12 +1,7 @@
 <!DOCTYPE html> 
 <html>
     <head>
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/foter.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/main-product.css')}}">
-      <link rel="shortcut icon" sizes="32x32" href="static/icons/Abstract.png">
+      {% include 'url.html' %}
       <title>Главная</title>
     </head>
 </html>
@@ -144,9 +139,5 @@
 </div>
 <br><br>
 </div>
-
-<script src="/static/js/redirects.js"></script>
-<script src="/static/js/main.js"></script>
-
 {% include 'footer.html' %}
 </body>
