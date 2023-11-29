@@ -50,6 +50,20 @@
   </svg>
 </div>
 
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть">&times;</span>
+    <form class="modal-content animate" action="../action_page.php" method="post">
+      <div class="container">
+        <h1 style="text-align: center; color: black;">Наши ТГ</h1>
+      </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <h1 style="color: black;"><b style="color: black;">@LisaSU_AMD -</b> МИХАИЛ ЯКОВЛЕВ</h1>
+        <h1 style="color: black;"><b style="color: black;">@Zipkatrew -</b> Вадим</h1>
+        <h1 style="color: black;"><b style="color: black;">@I_Senya0000_I -</b> Арсений</h1>
+      </div>
+    </form>
+  </div>
+
 <header class="header2">
   <div style="display: table; z-index: 1;">
     <img style="width: -1rem; height: 5rem; margin-top: 20rem; z-index: 1;" src="/static/icons/logo.png">
@@ -63,7 +77,10 @@
     </div>-->
     <div style="height: 30rem; width: 30rem; display: flex;">
       <img style="width: 30px; height: 30px; margin-top: 2px;" src="/static/icons/arrow.png">
-      <p style="font-family: 'Russo One', sans-serif;">Главная</p>
+      <div>
+        <p style="font-family: 'Russo One', sans-serif;">Главная</p>
+        <img style="width: 140px; height: 20px; margin-top: -10px;" src="/static/icons/test.png">
+      </div>
     </div>
   </div>
 </header>
@@ -77,9 +94,6 @@
   <div class="first hero">
     <button onclick="redirect('/vr')"><img class="hero-profile-img" src="/static/images/BG/BgVR.jpg"></button>
     <div class="hero-description-bk"></div>
-    <div class="hero-logo">
-      <img src="/static/icons/VRAR-квантум.png">
-    </div>
     <div class="hero-description">
       <p>VR</p>
     </div>
@@ -93,9 +107,6 @@
   <div class="second hero">
     <button onclick="redirect('/it')"><img class="hero-profile-img" src="/static/images/BG/BgIT.jpg"></button>
     <div class="hero-description-bk"></div>
-    <div class="hero-logo">
-      <img src="/static/icons/IT.png">
-    </div>
     <div class="hero-description">
       <p>IT</p>
     </div>
@@ -108,9 +119,6 @@
   <div class="first hero">
     <button onclick="redirect('/High_tech')"><img class="hero-profile-img" src="/static/images/BG/BgHajtek.jpg"></button>
     <div class="hero-description-bk"></div>
-    <div class="hero-logo">
-      <img src="/static/icons/High tech.png">
-    </div>
     <div class="hero-description">
       <p>Хайтек</p>
     </div>
@@ -124,9 +132,6 @@
   <div class="first hero">
     <button onclick="redirect('/promrobo')"><img class="hero-profile-img" src="/static/images/BG/Promrobo.jpg"></button>
     <div class="hero-description-bk"></div>
-    <div class="hero-logo">
-      <img src="/static/icons/Promrobo.png">
-    </div>
     <div class="hero-description">
       <p>Робототехника</p>
     </div>
@@ -141,6 +146,20 @@
 <div class="test">
   <p style="font-size: 20px;">DP-НЕЙМАРК - это уникальное выражение человеческой креативности, эмоций и воображения. Оно находит свое воплощение в различных формах: живописи, скульптуре, музыке, литературе и театре. Искусство позволяет нам увидеть мир по-новому, ощутить глубину человеческих чувств и эмоций, а также вызвать в нас восхищение и вдохновение. Оно является путем самовыражения и коммуникации, а также способом раскрыть свою индивидуальность и уникальность. Искусство способно трансформировать наше сознание, вдохновить изменения в обществе и стать источником развития искусствоведения. Оно является неотъемлемой частью культуры и наследия человечества, и каждое произведение, будь то картина, песня или пьеса, может иметь глубокий смысл и влияние на нашу жизнь.</p>
 </div>
+<br><br>
+
+<div class="test">
+  <button class="view, button-28" style="
+  position: relative;
+  border-radius: 4rem; 
+  width: 250px;
+  min-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  align-content: center;" onclick="document.getElementById('id01').style.display='block'">Наши тг</button>
+</div>
+
 <br><br>
 </div>
 {% include 'footer.html' %}

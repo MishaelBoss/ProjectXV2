@@ -11,11 +11,15 @@
   box-shadow: 0 0 5px rgb(145, 144, 144);
 }
 
+.header img{
+  width: 30%;
+}
+
 .header a {
   float: left;
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 12px;
+  padding: 0;
   text-decoration: none;
   font-size: 18px;
   line-height: 25px;
@@ -26,7 +30,7 @@
   margin-right: 30px;
 }
 
-.header a.logo {
+/*.header a.logo {
   font-size: 25px;
   font-weight: bold;
 }
@@ -40,7 +44,7 @@
 .header a.active {
   background-color: dodgerblue;
   color: white;
-}
+}*/
 
 .header-right {
   display: flex;

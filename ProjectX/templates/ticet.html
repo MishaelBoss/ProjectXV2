@@ -2,7 +2,7 @@
 <html>
     <head>
       {% include 'url.html' %}
-      <title>Билеты</title>
+      <title>Бронь</title>
     </head>
 </html>
 <body>
@@ -17,7 +17,7 @@
     <br><br><br><br>
     <div style="height: 30rem; width: 30rem; display: flex;">
         <img style="width: 30px; height: 30px; margin-top: 2px;" src="/static/icons/arrow.png">
-        <p style="font-family: 'Russo One', sans-serif;">Купить билеты</p>
+        <p style="font-family: 'Russo One', sans-serif;">Купить бронь</p>
     </div>
   </div>
 </header>
@@ -26,12 +26,12 @@
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть">&times;</span>
       <form class="modal-content animate" action="../action_page.php" method="post">
         <div class="container">
-          <h1 style="text-align: center; color: black;">Пакупка билета</h1>
+          <h1 style="text-align: center; color: black;">Бронь</h1>
         </div>
         <div class="container" style="background-color:#f1f1f1">
           <div style="position: relative; text-align: center; display: flex; justify-content: center; flex-wrap: wrap;">
             <div class="cart">
-              <a>
+              <a href="/buy" style="text-decoration: none;">
                 <div class="nameUser"><p>Имя: человека</p></div>
                 <hr class="hr-washed">
                 <div class="nameUser"><p>Номер места: 1</p></div>
@@ -40,20 +40,20 @@
             </div>
 
             <div class="cart">
-              <a>
+              <a href="/buy" style="text-decoration: none;">
                 <div class="nameUser"><p>Имя: человека</p></div>
                 <hr class="hr-washed">
-                <div class="nameUser"><p>Номер места: 2</p></div>
+                <div class="nameUser"><p>Номер места: 1</p></div>
                 <div class="nameUser"><p>Статус: свобдно</p></div>
               </a>
             </div>
 
-            <div class="cart">
-              <a>
+            <div class="cart" style="background-color: rgb(36, 35, 35);">
+              <a style="text-decoration: none;">
                 <div class="nameUser"><p>Имя: человека</p></div>
                 <hr class="hr-washed">
-                <div class="nameUser"><p>Номер места: 3</p></div>
-                <div class="nameUser"><p>Статус: свобдно</p></div>
+                <div class="nameUser"><p>Номер места: 1</p></div>
+                <div class="nameUser"><p>Статус: продано</p></div>
               </a>
             </div>
         </div>
@@ -63,9 +63,9 @@
 </div>
     
 <div class="test">
-  <p>Билеты</p>
+  <p>Купить бронь</p>
 </div>
-<br><br><br><br><br><br>
+<br><br><br><br>
 
 <div style="position: relative; text-align: center;">
   <div class="first hero">
@@ -77,7 +77,7 @@
       <p>Занято мест:</p>
       <p>Осталось времени:</p>
     </div>
-    <div class="eight" style="display: flexs;">
+    <div class="eight" style="display: flex; margin-top: 20px;">
       <button class="view, button-28" style="
       position: relative;
       border-radius: 4rem; 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include 'url.html' %}
+  <link rel="stylesheet" href="static/css/buy.css">
+  <title>Покупка</title>
+<style>
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <br><br><br><br>
+    <div class="row">
+        <div class="col-75">
+          <div class="container">
+              <div class="row">
+                <div class="col-50">
+                  <h3 class="TextBG">Адрес для выставления счета</h3>
+                  <br> <h3 class="TextBG">--</h3>
+                  <label for="fname" class="TextBG"><i class="fa fa-user"></i> Полное имя</label> 
+                  <input type="text" id="fname" maxlength="20" name="firstname" placeholder="Михаил Яковлев">
+                  <label for="adr" class="TextBG"><i class="fa fa-address-card-o"></i> Адрес</label>
+                  <input type="text" id="adr" name="address" maxlength="30" placeholder="ул. Белинского 41">
+                  <label for="city" class="TextBG"><i class="fa fa-institution"></i> Город</label>
+                  <input type="text" id="city" name="city" maxlength="20" placeholder="Новоуральск">
+                </div>
+      
+                <div class="col-50">
+                  <h3 class="TextBG">Оплата</h3>
+                  <div class="icon-container">
+                    <img height="40" src="/static/icons/sber.png">
+                  </div>
+                  <label for="ccnum" class="TextBG">Номер карты</label>
+                  <input type="text" id="ccnum"  maxlength="20" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth" class="TextBG">Exp Month</label>
+                  <input type="text" id="expmonth" maxlength="3" name="expmonth" placeholder="September">
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expyear" class="TextBG">Годен до</label>
+                      <input type="text" id="expyear" name="expyear" maxlength="4" placeholder="2023">
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv" class="TextBG">CVV</label>
+                      <input type="text" id="cvv" name="cvv"maxlength="4" placeholder="352">
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="search-form">
+              </div>
+            </div>
+              <input type="button" value="Оплатить" class="btn" onclick="alert('А не работает :|')">
+          </div>
+          
+        </div>
+      </div>
+    
+</body>
+
+</html>

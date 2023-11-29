@@ -188,6 +188,11 @@ def Student_materials():
     return render_template("Student_materials.html")
 
 
+@app.route('/buy')
+def buy():
+    return render_template("buy.html")
+
+
 @app.route('/About')
 def about():
     name = request.cookies.get('user')
