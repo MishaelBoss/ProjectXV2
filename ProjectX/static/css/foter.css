@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 
 .footer-distributed {
-  background-color: #292c2f;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: #000000;
+  box-shadow: 0 1px 5px 0 rgb(145, 144, 144);
   box-sizing: border-box;
   width: 100%;
   margin-top: 70px;
@@ -11,7 +11,6 @@
   padding: 45px 50px;
   bottom: -10px;
   position: relative;
-  border-radius: 20px 20px 0px 0px;
 }
 
 .footer-distributed .footer-left p {
